@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=a, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        a태그 : 링크를 걸어주는 태그
+        href속성 : 클릭 했을 때 이동할 링크 주소
+        a태그는 기본적으로 밑줄이 그어져 있다.(ins태그가 있는것처럼)
+        href 속성을 빈 문자열로 두면 현재 페이지가 새로고침된다.
+        (href="")
+     -->
+     <p>a태그를 링크로 이용하는 예제</p>
+    <a href="http://www.naver.com">네이버</a> : 현재 페이지가 직접 네이버로 변경 <br>
+    <a href="http://www.naver.com" target="_blank" >네이버</a> : 새 탭에 네이버 페이지를 열어준다. <br>
+    <!--
+        ./는 현재 페이지가 속해있는 폴더를 의미
+    -->
+    <a href="./exam2.html" target="_blank" >예제1</a> : 현재 html 파일과 같은 폴더에 있는 exam2.html을 연다<br>
+    <!--
+        .. : 현재 페이지가 속해있는 파일의 상위 폴더
+    -->
+    <a href="../Day 1/exam2.html" target="_blank" >예제1</a><br>
+    <!--
+        싱커 : a태그의 href 속성에  #아이디명을 입력하면 해당 아이디가
+        있는 위치로 이동을 하는것
+    -->
+    <p>a태그를 싱커로 이용하는 방법 : 현재 페이지의 특정 위치로 이동</p>
+    <a href="#h1">제목1로 이동</a><br>
+    <a href="#h2">제목2로 이동</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1 id="h1">제목1</h1>
+    <h1 id="h2">제목2</h1>
+    <a href="http://www.naver.com" target="_blank">
+        <input type="image" src="https://lh3.googleusercontent.com/Uuud6QP3kX1Mo8um6i1QpZddb6sNNGuJbLn1UZniKv1hMPAW7KG2kaJhyauNucORgKHW" alt="">
+    </a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>
