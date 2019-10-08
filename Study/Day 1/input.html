@@ -13,7 +13,7 @@
         <!-- "로 시작하면"로 끝내고 '로 시작하면'끝내야지
         "로 시작했는데 '로 끝내면 원하는 결과를 얻을수 없다 -->
         input : text 예제 <br>
-        <input type="text" placeholder="아이디">
+        <input type="text" placeholder="아이디" name="id" required>
         <!--
             value 속성 : 실제 값을 미리 입력하는 속성
         -->
@@ -35,15 +35,67 @@
         <input type="submit"> 제출</botton>
         <input type="submit"> 버튼</botton>
             <!-- submit,botton,reset은 버튼을 만드는 속성이며
-            button 태그로 ㄷ체가 가능하다
+            button 태그로 대체가 가능하다
             단, input태그의 버튼들은 단일 태그들이지만 button태그는 쌍태그이다.
-        submit은 서버로 데이터를 전송하기 위한 버튼
-        button은 단순화 버튼
-        reset은 같은 form태그 안에 있는 모든 input태그의 값들을 초기화
-        button태그에 type을 지정하지 않은경우
-        해당 버튼이 폼태그 안에 없다면 type의 submit으로 자동설정
-        해당 버튼이 폼태그 밖에 있다면 type이 button으로 자동설정-->
-    </form>
+            submit은 서버로 데이터를 전송하기 위한 버튼
+            button은 단순화 버튼
+            reset은 같은 form태그 안에 있는 모든 input태그의 값들을 초기화
+            button태그에 type을 지정하지 않은경우
+            해당 버튼이 폼태그 안에 없다면 type의 submit으로 자동설정
+            해당 버튼이 폼태그 밖에 있다면 type이 button으로 자동설정-->
+        <br>체크 박스 예제<br>
+        당신이 좋아하는 과일은?(다중 선택 가능)
+        <input type="checkbox" name="fruit" value="apple">사과      
+        <input type="checkbox" name="fruit" value="orange">오렌지
+    <br>색상 예제<br>
+    <input type="color" name="color" id="">
+
+    <br>시간 예제<br>
+    <input type="month"><br>
+    <input type="week"><br>
+    <input type="date"><br>
+    <input type="datetime-local"><br>
+    <input type="time"><br>
+    <br>이메일 예제<br>
+        <input type="email" name="email"><br>
+    <br>히든 예제 : 안보이지만 input태그가 있습니다<br>
+    <input type="hidden" name="">
+    <impur type="" alt=""그림없음>
+    <br> 인픗 예제
+    <input type="password">
+    <br>라디오 예제<br>
+        <input type="radio" name="gender" value="m"checked id="male">
+        <label for="">남자</label>
+        <input type="radio" name="gender" value="f"id="female">
+        <label for="">여자</label>
+    <br>url 예제 <br>
+        <input type="url">
+    <!--
+        유효성 검사는 검사하려는 문자열이 원하는 패턴인지
+        아닌지 확인한는 과정
+        기본 유효성 검사는 input태그의 url속성이나 email속성이 있다.
+        기타 방법으로는 Jquery를 이용한 방법과 자바스크립트를 이용한 방법이 있다.
+    -->
+    <br> search 예제  <br>
+        <input type="search">
+    <br> range 예제 <br>
+        <input type="range">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>회원가입</h1>
+    아이디: <input type="email"><br>
+    비밀번호: <input type="password"><br>
+    비밀번호 확인: <input type="email"><br>
+    이메일 : <input type="email"><br>
+    성별 : <input type="radio" name="gender" value="m"checked id="male">
+    <label for="">남성</label>
+    <input type="radio" name="gender" value="f"id="female">
+    <label for="">여성</label><br>
+    전화번호 : <input type="number">-<input type="number">-<input type="number"><br>
+    <input type="submit" value="회원가입">
+</form>
 
 
 </body>
