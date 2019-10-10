@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--table 태그는 테이블을 만드는 태그로,최소 table,tr,th/td가 있어야 한다.-->
+
+    <!--border 속성 : 테두리를 생성하는 속성으로 굵기를 입력해준다.CSS에서 관리할수있다.
+        caption 태그 : 테이블의 제목으로,테이블 가로를 기준으로 가운데에 정렬을 해준다-->
+    <caption>ㄴ1반 학생들 성적입니다</caption>
+        <table border="3">
+    <caption>반 성적</caption>
+    <!--thead,tbody,tfoot은 필수 요소는 아니지만 사용할 경우 평하다
+        순서가 바뀌어도 화면에서 보이는 순서는 thead,tbody,tfoot순으로 보인다-->
+    <thead>
+        <td>이름</td>
+        <td scope="col" >국어</td>
+        <td scope="col" >영어</td>
+    </thead>
+    <tfoot>
+        <th>평균</th>
+        <th>95</th>
+        <th>85</th>
+    </tfoot>
+    <tbody></tbody>
+        <tr>
+            <th>홍길동</th>
+            <th>100점</th>
+            <th>70점</th>
+        </tr>
+        <tr>
+                <th>윤사또</th>
+                <th>90점</th>
+                <th>95점</th>
+            </tr>
+    </table>
+</body>
+</html>
