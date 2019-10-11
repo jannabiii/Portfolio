@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>선택자 조합</title>
+    <style>
+    div{
+        color: red;
+    }
+    .hi{
+        background-color: thistle;
+        }
+        /*body태그 안에 있는 모든 p태그를 의미(자식,손자,증손자등 모든 후손)
+          -띄어쓰기만 했을시
+        */
+    body p{
+        font-weight: bold;
+    }
+        /* >는 body태그 바로 안에 있는 p태그(자식)에게만 적용*/
+    body>p{
+        text-decoration: underline;
+    }
+        /* +는 같은 태그를 한 인접(붙어있는)형제중에 div태그가 바로 이어져 나오는는것
+           +는 형제를 의미한다.앞 형제가 div태그이면서 본인이 div태그인 경우
+        */
+    div+div{
+        border-top: 1px solid black;
+    }
+        /* ~표시는 형제를 의미
+        앞 형제들중에 div1 클래스를 가지고 있으면서 본인이 p태그인 경우
+        */
+        /* ,는 그룹화를 의미
+       a,b{}dptj a인 경우와 b인 경우 모두 같은 스타일을 적용할때 사용
+        */
+    .div1~p,
+    .second{
+        border-bottom: 1px solid red;
+    }
+    /* 본인을 구체적으로 강하게 나타내는 방법: 붙여서 여러 선택자들을 사용한다.
+       태그 선택자들을 연달아 쓸 수 없다.
+       아이디 선택자들을 연달아 쓸 수 없다.
+      
+       예> pdiv{} 같은경우 p태그인지 div인지 모르기 때문에 사용x
+           #id#pw{} 같은것도 사용할수없다.id는 중복이 안되기 때문
+    
+    <가능한 상황들>
+        .클래스.클래스{}
+        태그.클래스{} 거꾸로는 쓸수없다(클래스를 먼저 사용하면 새로운 클래스처럼 보임)거꾸로 하면 의미가 달라진다.
+          예)div.hi{}
+            .hidiv{} 이렇게 쓰면 hidiv로 보이기때문에 구분불가
+        태그#아이디{} 거꾸로는 쓸수없다. 
+        #아이디.클래스{} 거꾸로 가능.왜냐면 아이디 앞에 구분을 할수있는 구분자가 있기때문
+    */
+    .hi.first{
+        border-left: 1px blue solid;
+    }
+    
+    </style>
+</head>
+<body>
+    <!--
+        id : 중복 불가
+        name : 중복 가능,하지만 하나만 입력해야함
+        class : 중복 가능,다중 가능(띄어쓰기로 구분)
+    -->
+    <div class="div1" >
+            <div class="hi first" >안녕</div>
+    </div>
+    <div>
+            <div class="hello" >안녕하세요</div>
+    </div>
+    <div class="hi second" >
+        <p>안녕2</p>
+    </div>
+    <p class="hi" >안녕3</p>
+</body>
+</html>
