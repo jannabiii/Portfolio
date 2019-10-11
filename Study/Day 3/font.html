@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>폰트 속성 예제</title>
+        <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+    <style>
+        /*@import url(165페이지에 있는 연결코드에 있는 url주소를 입력)*/
+        
+        /*link는 html파일에 CSS를 가져오는 방법
+          import는 CSS파일을 CSS에 가져오는 방법  
+        
+        /* font-family : 폰트 종류 설정
+                         한글의 경우 한글먼저쓰고 해당폰트의 영어를 써주고,없을 시 대체할수있는 폰트를 써준다.    */
+        /*body{ font-family: '돋움',dotum, Arial, Helvetica, sans-serif; }*/
+        body{ font-family: 'Stylish', sans-serif;
+              font-size :32px;
+              /*font-weight는 100-900까지의 값을 가진다.
+                숫자가 클수록 두꺼워짐
+                700은 bold로 지정되어있음*/
+              font-weight: 700;
+              /*text-decoration은 170페이지 표 참고
+                예)underline,overline,none,line-through */
+              text-decoration: underline;
+              font-style: italic;
+              color:dodgerblue;
+              /*글자 정렬 center,right,left,justify */
+              text-align: left;
+              width: 200px;
+              /* 글자 사이의 간격 */
+              letter-spacing: 1px;
+              /* 단어 사이의 간격 */
+              word-spacing: 3px;
+              /* 글자가 들어가는 빈박스의 높이를 설정한다 => 수직 가운데 정렬시 사용
+                 글자 자체의 높이를 바꿀때엔 text를 써야한다. */
+              line-height: 60px;
+              /*글자의 들여쓰기.주로 p태그에 사용*/
+              text-indent: 30px;
+              text-transform: capitalize;
+            }
+    </style>
+</head>
+<body>
+    안녕하세요. 제 이름은 홍길동입니다.
+    hello. my name is hong-gil-dong.
+</body>
+</html>
