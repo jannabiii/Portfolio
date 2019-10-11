@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>가상 선택자</title>
+    <style>
+        /*링크는 아직 다녀오지않은 링크,visit은 내가 다녀온 링크*/
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: green;
+        }
+        /*hover처럼 마우스를 가져다 대면 백그라운드 컬러로 표시를 해주는 동작도 해줄수 있다*/
+        a:hover{
+            background-color: tan;
+        }
+        /*활성화시 바뀌는 컬러 지정*/
+        input:focus{
+            color: darkcyan;
+        }
+        input:active{
+            background-color:darkseagreen;
+        }
+        /* input태그의 first-of-type은 해당태그의 첫번째 요소에 효과를 준다*/
+        input:first-of-type{
+            background-color: darkturquoise;
+        }
+        li:first-child{
+            color:violet;
+        }
+        /*2n-1은 홀수번째 항목마다 CSS적용*/
+        li:nth-child(2n-1){
+            text-decoration: underline;
+        }
+        /*before : h1태그 내용 앞에 content"앞"을 추가한다는 뜻*/
+        h1::before{
+            content:"앞 : "
+        }
+        /*after : h1태그 내용 뒤에 "뒤"를 추가한다는 뜻 */
+        h1::after{
+            content:" : 뒤";
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com">네이버</a>
+    <a href="http://www.naver123.com">네이버</a>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <ul>
+        <li>사과</li>    
+        <li>포도</li>
+        <li>키위</li>
+    </ul>
+    <h1>안녕</h1>
+</body>
+</html>
