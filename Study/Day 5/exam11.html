@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .table{
+            display: table; 
+        }
+        .tr{
+            display: table-row;}
+        .td{
+            display: table-cell;
+            border: 1px solid black;
+            border-top-style: dotted;
+            border-right: none;
+            }
+        .td:last-of-type{
+        border-right: 1px solid black;
+        }
+    div{
+        background-color: cornflowerblue;
+    }
+    .td>a{
+        background-color: olivedrab
+    }
+    </style>
+</head>
+<body>
+    <div class="table"></div>
+        <div class="tr">
+            <div class="td">월</div>
+            <div class="td">화</div>
+            <div class="td">수</div>
+            <div class="td"><a href="#">목</a></div>
+            <div class="td"><a href="#">금</a></div>
+            <div class="td"><a href="#">토</a></div>
+        </div>
+</body>
+</html>
