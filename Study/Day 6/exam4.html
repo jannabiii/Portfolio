@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float 예제</title>
+    <style>
+        /*부모 태그는 자식 태그에 float속성이 있으면 해당 자식
+        태그를 감싸지 못한다 =>높이를 포함할 수 없다.*/
+        .float-left{
+            float: left;
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+        }
+        .container{
+            border:1px solid red;
+            background-color: turquoise;
+        }
+        /*flaot을 이용할때 부모늬 높이가 계산되지 않은 경우
+        부모의 높이가 잡히도록 처리하는 방법*/
+
+        /*컨테이너 클래스가 있는 마지막에 빈 내용 ("")을 넣고
+        float-lefr와 right를 해제한후 해당 요소를 block 태그로만듬*/
+        .container::after{
+            content:"";
+            clear: both;
+            display:block;
+        }
+        .break{
+            clear:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="float-left" ></div>
+        실업급여를 받기 위한 기본적인 조건은 다음과 같다.
+        고용보험 적용 사업장에서 실직 전 18개월 (초단시간 근로자의 경우 24개월) 중 피보험 단위 기간이 통산하여 180일 이상일 것,
+        <br class="break">이직 사유가 수급자격 제한 사유에 해당하지 않을 것, 근로의 의사 및 능력이 있을 것, 비자발적으로 이직했을 것.
+        여기서 '피보험 단위 기간이 통산하여 180일 이상'이라는 것은 고용보험에 가입된 기간 중 보수 지급의 기초가 된 날
+        (실제 근로를 제공한 기간)이 180일 이상이어야 한다는 말이다. 
+    </div>
+    <div class="container">
+            <div class="float-left">
+    
+            </div>
+</body>
+</html>

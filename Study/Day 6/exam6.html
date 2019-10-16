@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position absoulute와 fixed예제</title>
+    <style>
+        .box{
+            width:300px;
+            height: 300px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        .abs{
+            position: absolute;
+            top: 50px;
+            left : 50px;
+        }
+        .fix{
+            /*position : fixed는 브라우저 특정 위치에 고정시키며 
+            스크롤이 내려가더라도 같이 내려간다
+            */
+            position: fixed;
+            /*text-outline: 50px;*/
+            top:50px;
+            left: 50px;
+            border-color: red;
+        }
+            /**기본적으로 탑이나 바텀 둘중 하나만 설정하고 lefr,right둘중 하나만 설정한다
+            width와 height가 지정되어 있을때 Top bottomdl 같이 쓰이는 경우는 heigh가 지정되지 않을때*/
+            .box2{
+            /*가운데 배치 : 화면 크기에 따라 가로와 세로의 길이가 달라진다*/
+                position:absolute;
+                top: 50px;
+                bottom:50px;
+                left: 50px;
+                right:50px;
+                border:3px solid blue;
+            }
+            /*가운데 배치 : 고정 크기*/
+            .box3{
+                width: 400px;
+                height: 400px;
+                border : 3px solid green;
+                box-sizing: border-box;
+                /*calc서로 다른 단위를 가지는 값들을 계산하는 함수
+                    값과 값사이에 입력하는 연산자는 공백으로 구분해 주어야한다.(띄어쓰기를 하라는 소리)*/
+                top: calc(50% - 200px);
+                left : calc(50% - 200px);
+                position: absolute
+            }
+            /*가운데 배치 : 고정 크기 margin 이용 */
+            .box4{
+                width: 300px;
+                height: 300px;
+                border : 3px solid tomato;
+                box-sizing: border-box;
+                top: 50%;
+                left : 50%;
+                margin : -150px 0 0 -150px;
+                position: absolute
+            }
+            .p{
+                height: 500px;
+                border: 3px solid black;
+                /*자식의 포지션이 앱솔루트일때  부모를 기준으로 top과 left등을 정하려면
+                부모 포지션에 relative를 설정하면 된다.*/
+                position: relative;
+            }
+            .box5{
+                width: 200px;
+                height: 200px;
+                border: 3px solid red;
+                position:absolute;
+                top: 0;
+                left: 0;
+            }
+    </style>
+</head>
+<body>
+    <!--position: absolute를 설정하면 특별한 상화잉 아니라면
+    기분은  body태그를 기준으로 한다
+    top : 기준으로부터 아래로 몇 px .right : 기준으로부터 왼쪽으로 몇px
+    상우하좌부터 몇 px떨어져있는지를 나타낸다.-->
+    <div class="box" ></div>
+    <div class="box absolute"></div>
+    <div class="box"></div>></div>
+    <div class="box2" ></div>
+    <div class="box3" ></div>
+    <div class="box4" ></div>
+    <div class="p">
+        <div class="box5" ></div>
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
