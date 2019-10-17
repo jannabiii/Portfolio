@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메뉴 예제2</title>
+    <style>
+        .nav{
+        height: 30px;
+        background-color: #222f3e;
+     }
+     .nav>div{
+        margin-right :20px;
+     }
+     .nav>div{
+        height: 30px;
+        border: 0px solid black;
+        box-sizing: border-box;
+        line-height: 30px;
+        font-size: 14px;
+        color :floralwhite;
+        display: inline-block;
+     }
+     .nav input :hover{
+        border-radius: 0px;
+     }
+    .side{
+        float: left;
+        margin-top:20px
+    }
+    .side>div{
+        height: 100px;
+        width: 200px;
+        background-color: #222f3e;
+        border: 1px solid;
+        text-align: center;
+        color :floralwhite;
+        line-height: 90px;
+        text-decoration: none;
+        border-bottom: none;
+    }
+    .side>div:last-of-type{
+        border-bottom: 1px solid;
+    }
+    .content{
+        height: 300px;
+        width: calc(100% - 200px - 30px);
+        border: 1px solid;
+        float: right; /*float은 div같은 블락태그에 걸수있다.*/
+        margin-top:20px
+    }
+    </style>
+</head>
+<body>
+        <div class="nav"> 
+                <div a href="#">로고</div>
+                <div><input type="text" name="id" placeholder="Search or jump to..."></div>
+                <div><input type="button" value="검색"></div>
+                <div>Pull requests</div>
+                <div>Issues</div>
+                <div>Marketplace</div>
+                <div>Explore</div>
+        </div>            
+    <div class="side">
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+    </div>
+    <div class="content" ></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메뉴 예제</title>
+    <style>
+    .nav{ }
+    .nav>div{
+        height: 50px;
+        width: calc(100% / 3); /*3등분으로 나누기위해 계산식을 써준다.*/
+        background-color: sandybrown;
+        font-size: 30px;
+        float : left; /*inline-block시 생기는공백에 의한 띄움을 없애기 위해*/
+        border: 1px solid;
+        box-sizing: border-box; /*박스 사이즈를 맞추는*/
+        text-align: center; /*글자 가운데로 보내기*/
+        line-height: 40px; /*글자를 가운데로 보내기위해 높이height와 얼추 맞춘다.*/
+        border-right: none; /*가운데 겹치는 라인을 1px로 만들기위해 오른쪽을 다 없앤다*/
+        }
+    .nav>div:last-of-type{
+        border-right: 1px solid;
+    }
+    .nav>div>a{
+        text-decoration: none;
+        color : black;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+            <div><a href="#">메뉴1</a></div>
+            <div><a href="#">메뉴2</a></div>
+            <div><a href="#">메뉴3</a></div>
+    </div>
+</body>
+</html>
