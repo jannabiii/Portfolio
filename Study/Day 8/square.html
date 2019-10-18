@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>도형 예제</title>
+    <style>
+     div{
+        height:200px;
+        width: 200px;
+        border :1px solid;
+        box-sizing: border-box; /*테두리가 있는경우 약간의 오차가 있을수 있어서 border-box입력*/
+        background-color: teal;
+        position: absolute;
+        top: 50%; /*absolute 50%로 지정시 가운데부터 위치 시작된다.*/
+        left : 50%; /*vw 브라우저의 가로를 따르는것이라 전체중 50vw라고 적으면 50%와 같은 효과*/
+        margin : -100px 0 0 -100px;
+     }
+     div:hover{
+        height:300px;
+        width: 300px;
+        border :1px solid;
+        box-sizing: border-box;
+        background-color: teal;
+        position: absolute;
+        top: 50%;
+        left : 50%;
+        margin : -150px 0 0 -150px;
+     }
+     button{
+         width: 50px;
+         height: 30px;
+     }
+     button:hover{
+        width: 60px;
+        height: 40px;
+        position: relative;
+        top: -5px;
+        left: -5px;
+     }
+    </style>
+</head>
+<body>
+    <button>버튼</button>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>고정메뉴 예제</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .nav{
+        height: 50px;
+        border: 1px solid;
+        background-color: #222f3e;
+        box-sizing: border-box;
+        position: fixed; /*앱솔루트는 화면내 고정.픽스드는 브라우저내 고정*/
+        top: 0;
+        left: 0;/*top과 left지정을 안하면 위에 붙어있지않아서 지정함.*/
+        width: 100%;
+        }
+        .content{
+        height: 1000px;
+        border: 1px solid;
+        background-color: rgb(237, 253, 180);
+        box-sizing: border-box;
+        margin-top: 60px;
+        }
+        .b1{/*.은 class에 붙이는것*/
+            height:50px;
+            width: 50px;
+            border :1px solid;
+            background-color: teal;
+            position: fixed; /*위치를 고정시키는거라 수치값입력*/
+            bottom : 30px;
+            right : 30px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 50px;
+        }
+        a{/*일반 태그는 .을 붙이지 않는다.*/
+            text-decoration: none;/*글자 밑줄없애기*/
+            color : black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+      <div class="nav"></div>
+      <div class="content"></div>
+      <div class="b1"><a href="#">위로</a>
+        <!--링크를 걸어둘때 좌표를 딱히 적어두지 않으면(#만 있을때)
+            기본적으로는 무조건 위로 올라가게 되어있다. -->
+    </div>
+</body>
+</html>

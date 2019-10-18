@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex 예제</title>
+    <style>
+        .parent{
+            
+            border: 2px solid;
+            display: flex; 
+            /*자식들의 크기의 합이 부모를 넘어가도 flex는 부모를 넘어갈수 없다.
+               그래서 child1,2에게 float:left;를 넣지 않아도 딱맞게 들어간것
+               display: flexd인 경우 justigy-content를 이용하여 가운데 정렬을 쉽게할수있다
+               flex는 공백을 무시하기때문에 띄우려면 margin같은 걸 사용해야함.*/
+            justify-content: center;
+        }
+        .child{
+            height: 50px;
+            box-sizing: border-box;
+            border: 2px solid;
+        }
+        .child1{
+            width: 200px;
+            border-color: tomato;
+           
+        }
+        .child2{
+            width: 400px;
+            border-color: teal;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="parent" >
+        <div class="child child1" ></div>
+        <div class="child child2" ></div>
+    </div>
+</body>
+</html>
