@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>그라디언트</title>
+    <style>
+        .g1{/*linear-gradient : 선형으로 그라디언트 적용
+             left : 방향*/
+        background: -webkit-linear-gradient(left,#ff0000 0%, #ffff00 50%, #00ff00 100%);  
+        }
+        .g2{/*linear-gradient : 선형으로 그라디언트 적용
+             left : 방향*/
+        background: -webkit-gradient
+        (linear,left top,right top, color-stop(0%,#f00),color-stop(50%,#ffff00),color-stop(100%,#00ff00));
+        }
+        .box{
+        width: 100px;
+        height: 300px;
+        display: inline-block;
+        }
+    </style>
+</head>
+<body>
+   <div class="g1 box"></div>
+   <div class="g2 box"></div> 
+</body>
+</html>

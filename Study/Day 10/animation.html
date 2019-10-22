@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>애니메이선 예제</title>
+    <!--animation과 transition
+        공통점 : 어떠한 효과를 준다.
+        차이점 : transition은 최종 변경된 속성이 가상선택자에 있고
+                animation은 가상 선택자가 필요없고,animation으로 이벤트를 등록한다.-->
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background:  -webkit-gradient(linear,left top, right top,
+            color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #f00));
+            /* animation-name은 적용할 애니메이션 이름을 넣어준다
+            animation-duration은 애니메이션의 지속(유지)시간
+            animation-interraction-count 은 애니메이션 반복횟수 */
+            animation-name: scale;
+            animation-duration: 1.5s;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease; /*속도를 어떻게 할것인지*/
+            /*animation-fill-mode : 애니메이션의 종료된 후 상태를 처음 상태로 돌아갈지(backwards)현상태(나중상태: forwards)로
+            갈지를 설정하는 속성,하지만 지금 예제에서는 다음과 같은 이유로 의미가 없다.
+            1.animation의 무한 반복
+            2.animation의 시작과 끝의 상태가 같기 때문에*/
+            /*animation-direction: 애니메이션 진행 방향으로
+            normal :0% -> 100%
+            reverse : 100% -> 0%
+            alernate : 0-> 100% -> 0%
+            alernate-reverse : 100 -> 0-> 100%
+            */
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+        }
+        /*keyframes xxx : xxx이라는 애니메이션을 등록*/
+        @keyframes scale 
+           /* 0%{} 시작지점 from{}
+            50%{} 끝지점 50%{}
+            100%{} 중간지점 to{} */
+            /*%는 애니메이션 실행시간의 전체시간을 기준으로 계산한다.
+            실행시간의 전체시간은 animation-duration 속성으로 지정한다.*/
+            /*from,to로 사용하는경우엔 중간에 퍼센트를 잘 사용하지 않는다*/
+            0%{}
+            100%{
+                width: 200px;
+                height: 200px;
+            }
+                        
+    </style>
+</head>
+<body>
+    <div class="box box1" ></div>
+</body>
+</html>

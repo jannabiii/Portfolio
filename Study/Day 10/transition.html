@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transition 예제</title>
+    <style>
+        /*transition 속성은 요소에 지정된 효과(크기,색상,위치 등)이 이벤트(가상 선택자)
+        에 의해 바뀔 때 전환되는 효과를 보여주기 위해 사용하는 속성*/
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: brown;3
+        }
+        .box1{
+            transition-property: all; /*가상 선택자에 의한 이벤트가 발생했을때 트랜지션에 의한 효과를 누구에게 적용시킬것인지*/
+            transition-duration: 1s; /*지속시간,가상 선택자에 의한 효과가 최종적용까지 얼마나 걸리는지*/
+            transition-delay: 0.1s; /*지연시간,이벤트가 시작하기전 대기시간*/
+            transition-timing-function: ease; /*이벤트 진행 속도와 관련된 속성.미리 지정되어 있는 값들이 있다.*/
+        }
+        .box1:hover{
+            width: 200px;
+            height: 200px;
+        }
+        .box2{
+            -webkit-transition:all 4s steps(4,end);
+        }
+        .box2:hover{
+            width: 500px;
+            height: 500px;
+        }
+        .box3{
+            -webkit-transition: background 1s linear, 
+            opacity 3s linear,
+            width 2s linear, height 3s linear;
+        }
+        .box3:hover{
+            width: 200px;
+            height: 200px;
+            opacity: 0.1;
+            background: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>

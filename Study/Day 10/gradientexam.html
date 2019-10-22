@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .g{
+             width:100px;
+             height:100px;
+             display: inline-block;
+             float: left;
+        }
+        .left{
+            content:"";
+            clear: both;
+            display: block;
+        }
+        .right{
+            content:"";
+            clear: both;
+            display: block;
+        }
+        .box1{
+            background: -webkit-gradient(
+                linear,left top,right bottom,color-stop(0%,#f00),color-stop(50%,#ffff00),color-stop(100%,#00ff00));
+        }
+        .box2{
+            background: -webkit-gradient(
+                linear,right top,left bottom, color-stop(0%,#f00),color-stop(50%,#ffff00),color-stop(100%,#00ff00));
+        }
+        .box3{
+            background: -webkit-gradient(
+                linear,left bottom,right top, color-stop(0%,#f00),color-stop(50%,#ffff00),color-stop(100%,#00ff00));
+        }
+        .box4{
+            background: -webkit-gradient(
+                linear,right bottom,left top, color-stop(0%,#f00),color-stop(50%,#ffff00),color-stop(100%,#00ff00));
+        }
+        .box5{
+            background:radial-gradient(90px,#C2FFD8,#465EFB);
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <div class="g box1"></div>
+        <div class="g box2"></div>
+    </div>
+    <div class="right" >
+        <div class="g box3"></div>
+        <div class="g box4"></div>
+    </div>
+    <div class="g box5">
+</body>
+</html>
