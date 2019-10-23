@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>input 복습예제</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 800px;
+            margin: 50px auto;
+            box-sizing: border-box;
+            border:1px solid black;
+        }
+        .container>h1{
+            text-align: center;
+        }
+        .box::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .box-left{
+            width: 30%;
+            float: left;
+        }
+        .box-right{
+            width: 70%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <form class="container" method="GET" action="/test" >
+        <h1>회원가입</h1>
+        <div class="box box-id">
+            <div class="box-left">아이디</div>
+            <div class="box-right"><input type="text" name="id" autocapitalize="" placeholder="아이디를 입력하세요." ></div>
+        <div class="box box-pw">
+            비밀번호: <input type="email" placeholder="비밀번호를 입력하세요." ><br>
+        </div>
+            비밀번호 확인: <input type="email" placeholder="비밀번호를 확인을 입력하세요." ><br>
+            이메일: <input type="email" placeholder="이메일을 입력하세요." ><br>
+            성별:  <input type="radio" name="gender" value="m"checked id="male">
+            <label for="">남자</label>
+            <input type="radio" name="gender" value="f"id="female">
+            <label for="">여자</label><br>
+            전화번호:<input type="number">-<input type="number">-<input type="number"><br>
+            <button>회원가입</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filter예제</title>
+    <style>
+        /*blur: 픽셀값이 높을수록 많이 흐려진다*/
+        .blur>img{
+            filter: blur(4px);
+        }
+        /*brightness: %가 낮을수록 어두워지고 100%는 원본*/
+        .brightness>img{
+            filter: brightness(50%);
+        /*contrast : 대조*/
+            filter: contrast(80%);
+        }
+    </style>
+</head>
+<body>
+    <p class="blur"><img src="../Day 2/cat.jpeg"></p>
+    <p class="brightness"><img src="../Day 2/cat.jpeg"></p>        
+</body>
+</html>

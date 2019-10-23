@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform 예제</title>
+    <style>
+        p{/*z축을 설정하는 속성으로 z축이 필요한 요소(태그) 부모에 할당해야한다.*/
+            perspective: 1000px; /*최대 만들어둔 사이즈 1000*/
+            perspective-origin: 0 0;
+        }
+        p>img{/*좌표를 이동하는 기능 transform*/
+            position:absolute;
+            top: 40%;
+            left:40%;
+            transform: translatez(100px);/*z축으로 사이즈를 바꾸는것*/
+            transform: scale(2,2);
+            transform: scalez(3) translatez(100px);
+            transform: rotatez(30deg);
+            }
+            /*translatez의 값이 고정인 상태에서 perspective의 값만 변경했을때의 설명으로
+            perspective의 값이 클수록 이미지가 작아진다.*/
+    </style>
+</head>
+<body>
+    <p><img src="../Day 2/cat.jpeg"></p>
+</body>
+</html>
