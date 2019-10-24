@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>레이아웃 예제</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;}
+        .container1, .container5{
+            background-color: gray;
+            padding: 10px;
+        }
+        .container1 .nav{
+            min-width: 1000px;
+            height: 50px;
+            background-color: white;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 30%;
+            height: 50px;
+            float: left;
+            background-color: salmon;
+        }
+        .box2{
+            width: 50%;
+            height: 50px;
+            float: left;
+            background-color: greenyellow;
+        }
+        .box2{
+            width: 20%;
+            height: 50px;
+            float: left;
+            background-color: red;
+        }
+        .clear::after{
+            clear: both;
+            content:"";
+            display:block;
+        }
+        .container5 .box1{
+            width: 20%;
+            height: 50px;
+            background-color: rgb(255, 108, 211);
+            float: left;
+        }
+        .container5 .box2{
+            width: 30%;
+            height: 50px;
+            background-color: rgb(0, 255, 200);
+            float: left;
+        }
+        .container5 .box3{
+            width: 50%;
+            height: 50px;
+            background-color: rgb(255, 0, 34);
+            float: left;
+        }
+        @media screen and (max-width:1099px){
+            .container1 .nav{
+                width: 700px;
+            }
+        }
+        @media screen and (max-width:719px){
+            .container1 .nav{
+                width: 300px;
+            }
+            .container2 .box1,
+            .container2 .box2,
+            .container2 .box3{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="nav"></div>
+    </div>
+    <div class="container2 clear ">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="container3">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="container5 clear">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

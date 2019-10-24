@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/54db56871c.js" crossorigin="anonymous"></script>
+    <style>
+        .nav{
+        height: 30px;
+        background-color: rgb(255, 238, 183);
+        clear: both;
+        content:"";
+        display:block;
+        }
+        .input{
+            float: right; 
+        }
+        .nav>div{
+            box-sizing: border-box;
+            line-height: 30px;
+            font-size: 14px;
+            color :black;
+            display: inline-block;
+        }
+        .side{
+            float: left;
+            margin-top:10px
+        }
+        .side>div{
+            height: 50px;
+            width: 100px;
+            background-color: rgb(255, 238, 183);
+            border: 1px solid;
+            text-align: center;
+            color: black;
+            line-height: 45px;
+            text-decoration: none;
+            border-bottom: none;
+        }
+        .side>div:last-of-type{
+            border-bottom: 1px solid;
+        }
+        .content{
+            height: 300px;
+            width: calc(100% - 80px - 30px);
+            border: 1px solid;
+            float: right;
+            margin-top:10px;
+        }
+        .menu{
+            display: none;
+        }
+        @media screen and (max-width:1080px){
+            .side{
+             display: none;}
+            .container{
+                width: 100%;
+            }
+            .menu{
+                display: block;
+            }
+         }  
+        @media screen and (max-width:720px){
+            .menu{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav"> 
+        <div class="logo" >로고</div>
+        <div class="menu">메뉴1</div>
+        <div class="menu">메뉴2</div>
+        <div><input type="text" name="id" placeholder="Search or jump to..."></div>
+        <div><input type="button" value="검색"></div>
+        <i class="fas fa-bars"></i>
+    </div> 
+    <div class="side">
+        <div class="sidemenu">메뉴1</div>
+        <div class="sidemenu">메뉴2</div>
+        <div class="sidemenu">메뉴3</div>
+    </div>
+    <div class="content" ></div>
+</body>
+</html>

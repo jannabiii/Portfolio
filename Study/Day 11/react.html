@@ -22,6 +22,8 @@
             display: none;
         }
         @media screen and (max-width:720px){
+            /* media는 장치의 가로 화면을 기준으로 반응형을 적용
+               max-width또는 min을 쓸때 조심해야한다.*/
             .pc{
                 display: none;
             }
@@ -33,6 +35,10 @@
                 line-height: 50px;
                 text-align: center;
                 float: right;
+            }
+            .mobile:hover{
+                cursor: pointer;
+                border:1px solid white;
             }
         }
     </style>

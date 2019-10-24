@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반응형 실습예제2</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav{
+            height: 50px;
+            width: 200px;
+            background-color: cadetblue;
+        }
+        .container{
+            height: 100%;
+            width: 200px;
+            float: left;
+            font-size: 30px;
+            padding-left: 20px
+        }
+        .container::after{
+            clear: both;
+            content:"";
+            display:block
+        }
+        @media screen and (max-width:1079px) and (min-width:701px){
+            .nav{
+                float: left;
+                width:200px;
+                border:1px solid black;
+                border-bottom: none;
+            }
+        }
+            .container{
+                border:1px solid black;
+                border-bottom: none;
+            }
+            .container :last-child{
+                border-bottom: 1px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="container">
+            <div>메뉴1</div>
+            <div>메뉴2</div>
+            <div>메뉴3</div>
+        </div>
+    </div>
+</body>
+</html>
