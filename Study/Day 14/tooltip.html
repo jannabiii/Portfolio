@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div class="container">
+                <h3>Tooltip Example</h3>
+                <p>The data-placement attribute specifies the tooltip position.</p>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a>
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a>
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a>
+                <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a>
+              </div>
+              <!--팝오버에서 오버된 제목을 수정하려면 titlr 속성을 수정하고
+                  내용을 수정하려면 data-contene를 수정하면 된다.-->
+              <script>
+              $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();   
+              });
+              </script>
+              <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+              <script>
+                    $(document).ready(function(){
+                      $('[data-toggle="popover"]').popover();
+                    });
+                    </script>
+              <div class="toast">
+                    <div class="toast-header">
+                      Toast Header
+                    </div>
+                    <div class="toast-body">
+                      Some text inside the toast body
+                    </div>
+                  </div>
+                  <script>
+                        $(document).ready(function(){
+                          $('.toast').toast('show');
+                        });
+                        </script>
+                        <div class="toast" data-autohide="false">
+                                <div class="toast-header">
+                                  <strong class="mr-auto text-primary">Toast Header</strong>
+                                  <small class="text-muted">5 mins ago</small>
+                                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                </div>
+                                <div class="toast-body">
+                                  Some text inside the toast body
+                                </div>
+                              </div>
+                              
+</body>
+</html>
