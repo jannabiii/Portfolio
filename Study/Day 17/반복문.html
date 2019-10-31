@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반복문</title>
+    <script>
+    /*
+    반복문 : 규칙적인 작업을 반복적으로 할 때 필요
+    -규칙
+    -반복횟수
+    -(for문,while문),(do while문)
+        -for문 
+        for(1.초기화,2.5.8조건식,4,7증강연산식){
+            3.6실행문;
+        }
+        1.초기화 : 조건식이나 실행문에서 사용하는 변수의 시작 값을 설정.
+                  콤마(,)를 통해 여러 변수를 초기화하고 생략할수 있다.
+        2.조건식 : 조건식이 참이면 거짓이면 반복문을 종료.조건식도 생략 가능
+        3.증강연산식 : 조건식의 사용하는 변수를 증가시킨다.생략 가능ㄷ
+*/
+    var i
+    for(i=1; i<=5; i++){ /*n은 (5번)반복하는 예제*/
+        console.log('hello');
+    }
+    /*위 예제를 응용하여 1부터 5까지 출력하는 코드를 작성하세요.*/
+    var i
+    for(i=1; i<=5; i++){
+        console.log(i);
+    }
+    /*1부터 5까지의 합을 출력하는 코드를 작성하세요
+        sum = 0
+    i=1 sum = 0 + 1 + 2
+    i=2 sum = 0 + 1 + 2 +3 
+    i=3 sum = 0 + 1 + 2 +3 +4
+    i=4 sum = 0 + 1 + 2 +3 +4 +5
+
+    sum = 0
+    i=1 sum1 = sum1 + 1
+    i=2 sum2 = sum2 + 3 
+    i=3 sum3 = sum3 + 4
+    i=4 sum4 = sum4 + 5
+        sum  = sum + 1
+    */
+    var sum= 0
+    for(i=1; i<=5; i++){
+       sum = sum + i;
+       sum += i; /*결합연산자로 표현.누적시키는 코드
+       */
+    }
+    console.log('1부터 5까지의 합 : ', sum);
+    /*약수 : 나누어 떨어지는 수
+    8의 약수 : 1 2 4 8 가 나와야하니 총 8번을 걸쳐서 계산해야함
+    1.반복횟수 : i는 1부터 8까지 하나씩 증가
+    2.규칙성(실행문): i가 num의 약수이면 i를 출력
+    */
+
+   /*   i=6 sum = 8 / 1
+        i=4 sum = 8 / 2
+        i=2 sum = 8 / 6
+        i=1 sum = 8 / 8
+    */
+    var num= 8;
+    for(i=1; i<=8; i++){
+      if(num % 1 == 0){
+        console.log(i);
+        }
+    } 
+    /*
+    구구단 7단을 출력하는 예제를 작성하세요.
+    7 x 1 = 7
+    7 x 2 = 14
+    7 x 3 = 21
+    7 x 4 = 28
+    7 x 5 = 35
+    7 x 6 = 42
+    7 x 7 = 49
+    7 x 8 = 56
+    7 x 9 = 63
+    */
+    var num= 7;
+    for(i=1; i<=9; i++){
+       console.log('',num,'x', i , '=', num*i);
+        
+    } 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
