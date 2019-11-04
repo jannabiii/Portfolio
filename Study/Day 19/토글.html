@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>토글</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+    .red{
+        background-color: red;
+    }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="input" class="check" checked value="사과">
+    <button>토글</button>
+    <script>
+    /*jquery는 자바스크립트로 구성되어 있는 라이브러리이다.
+    자바스크립트는 아이디나,클래스명에 따라 호출하는 함수가 달라진다.
+    jquery는 이러한 불편한 점을 해소하기 위해 나온 것이다.
+    
+    -jquery에서 객체 정보를 가져오는 방법
+    $('선택자')
+    -jquery에서 속성정보를 가져오는방법
+    $('선택자').attr(속성명);
+    $('선택자').prop(속성명);
+    */
+    var input1 = $('#input1');
+    var input2 = $('.check');
+    var input3 = $('input');
+    console.log(input1.attr('type'))
+    console.log(input1.prop('type'))
+    //input1요소에 checked속성이 없는경우 
+    /*
+        attr은 속성이 없기 때문에 undefined가 출력되고
+        prop은 속성이 없어도 체크가 안되어 있기 때문에 false가 출력
+    */
+    //input1요소에 checked속성이 있는경우 
+    /*
+        attr은 해당 속성값이 그대로 출력되고 
+        prop은 해당 속성이 체크되어 있기 때문에 true로 출력된다.
+    */
+    console.log(input1.attr('checked'))
+    console.log(input1.prop('checked'))
+    /*jquery에서 속성값을 설정하는 방법
+    $('선택자').attr('속성명',값);
+    $('선택자').prop('속성명',값);
+    */
+    $('#input1').prop('checked',false);
+    //input태그에서 value의 값을 가져오는 방법
+    var str = $('#input1').prop('value');
+    console.log(str);
+    </script>
+</body>
+</html>
