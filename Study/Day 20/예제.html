@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>예제</title>
+    <style>
+        *{
+            margin : 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    nav ul>li{
+        list-style: none;
+        height: 50px;
+        line-height: 48px;
+        margin-left: 10px;
+        width:70px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    nav{
+        background-color: teal;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav ul>li:hover{
+        border :1px saddlebrown;
+    }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+    /*
+    이중반복문
+    배열
+    함수
+    이벤트 등록 방법
+    __________________________________________
+    - jquery에서 속성 정보를 가져오는 방법
+        $('선택자').attr(속성명);
+        $('선택자').prop(속성명);
+    __________________________________________
+    */
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+        alert('버튼이 클릭되었습니다');
+    })
+    })
+    /*
+    $(document).ready(function(){
+        구현;
+        });
+    document(HTML문서)가 준비되면,다시말해 body태그에 있는 구성이 완료되면
+    구현에 있는 코드를 실행하라.
+    */
+    $(document).ready(function(){
+        $('#btn1').click(function(){//버튼을 클릭하면 인풋창에 입력한값을 알림창으로 띄우는 작업
+            /*
+            1.입력창에 입력된 정보(value에 저장된)를 가져옴
+            2.가져온 정보를 알림창에 띄움
+            */
+        alert('버튼이 클릭되었습니다');
+    })
+    })
+str = parseint(str)+1
+alert(str);
+//btn 클릭 이벤트 종료
+$('#btn3').click(function(){
+    $('.box').prop('class');
+    //btn2 클릭 이벤트 종료
+})
+/*
+addclass('클래스명') : 요소에 해당 클래스를 추가
+remobwclass('클래스명') : 요소에 해당 클래스를 제거
+toggleclass('클래스명') : 요소에 해당 클래스가 있으면 제거 없으면추가
+*/
+/*slidedown의 매게변수
+1. speed
+문자열이나(string)이나 숫자(number)가 온다
+2.callback
+=다 내려온 뒤 실행할 작업으로 함수가 온다
+-선택
+
+*/
+    </script>
+</head>
+<body>
+    <input type="text" name="id" id="id">
+    <button id="btn1">버튼</button>
+    <div class="box"></div>
+    <div class="box display-none"></div>
+    <ui>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴</li>
+    </ui>
+</body>
+</html>

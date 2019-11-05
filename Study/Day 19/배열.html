@@ -14,6 +14,41 @@
     console.log(arr2);
     console.log(arr3);
     console.log('배열 arr3의 0번지 값 :',arr3[0]);
+    /*배열 함수들
+    length(): 배열의 길이를 숫자로 알려주는 함수
+    */
+    console.log('배열 arr3의 길이 :' , arr3.length);
+    //push(값): 배열마지막에 값을 추가
+    arr3.push("7");
+    console.log(arr3);
+    //pop(): 배열 마지막에 값을 빼서 가져옴
+    console.log(arr3.pop());
+    //unshifht: 배열 맨 앞에 값을 추가
+    arr3.unshift(G);
+    console.log(arr3);
+    //shift(): 배열 맨 앞에 값을 빼서 가져옴
+    console.log(arr.shift());
+    //join(토큰) : 배열값들 사이에 토큰을 넣어 하나의 문자열로 만듬
+    console.log(arr3.join('|'));
+    /*indexof(검색,시작위치):배열에서 검색하려는 값이 몇 번지에 있는지알려줌
+                            검색하려는 값이 배열에 없으면 -1을 알려줌
+                            검색: 필수 , 시작위치 : 선택 
+    */
+    console.log(arr3.indexOf(1));
+    //reverse함수는 배열읫 순서를 거꾸로    
+    console.log(arr3.reverse());
+    //splice(시작위치,마지막위치): 배열의 일부를 잘라내고 잘라낸 부분을 돌려주는 함수
+    var arr4 = arr3.splice(1,2);
+    console.log(arr3);
+    console.log(arr4);
+    //slice(시작위치,마지막위치): 배열의 일부를 복사하여 복사한 부분을 돌려주는 함수
+    var arr5 = arr3.slice(0,1);
+    console.log(arr3);
+    console.log(arr4);
+    /*splice랑 기능은 비슷
+    차이점: slice는 원본이 안바뀐다
+    splicee는 원본에서 잘라내기 때문에 원본이 바뀜
+    slice는 복사할 마지막 번지+을 알려주지만 splice는 갯수를 알려준다.*/
     </script>
 </head>
 <body>
