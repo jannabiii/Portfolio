@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>복습</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        .nav{
+            background-color: thistle;
+        }
+        .menu{
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 25px;
+            border-color: 1px solid thistle;
+        }
+        nav>ul{
+            display: flex;
+        }
+        .menu:hover{
+            border-color: tomato;
+        }
+        nav>li{
+            cursor: pointer;
+        }
+        .menu1>ul{
+            width : 200px;
+            margin-top: 1px;
+            display: none;
+        }
+        .sub-menu{
+            background-color: violet;
+            border-color: 1px solid thistle;
+        }
+        .sub-menu:hover{
+            border-color: teal;
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+         $(document).ready(function(){
+             $('.menu1').click(function(){
+                $('.menu>ul').slideToggle(500);
+             })
+         })
+   
+    </script>
+</head>
+<body>
+    <nav>
+	  <ul>
+          <li class="menu menu1">메뉴1</li>
+            <ul>
+                <li class="sub-menu">서브1</li>
+                <li class="sub-menu">서브2</li>
+            </ul>
+          <li class="menu menu2">메뉴2</li>
+          <li class="menu menu3">메뉴3</li>
+      </ul>
+    </nav>
+</body>
+</html>

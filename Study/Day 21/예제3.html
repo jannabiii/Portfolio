@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        /*html문서의 정보를 설정하는 방법 : text(),html(),val()  셋다 덮어쓰기.문자열로 가져옴
+        html(값) :값을 해당 요소 안에 있에 html코드로 입력
+        text(값) :값을 해당 요소 안에 글자로 입력,태그와 같은 정보는 제외
+        val(값) : 값을 해당 요소안에 value에 입력*/
+    $("#btn1").click(function(){
+        console.log($('body').html());
+        console.log($('body').text());
+    })
+    //버튼 클릭시 이벤트 등록을 하는 registerEventgkatn
+    //생성
+    function registerEvent(){
+        $("#botton").click(function(){
+        var str = $('.box').html()
+        str += '<botton>버튼</botton>'
+        $('.box').html(str);
+        registerEvent();
+    })
+    }//버튼 클릭시 이벤트를 등록하도록 registerEvent함수 호출
+    registerEvent();
+    
+    
+    //$('body').text('<input type="text" value=123>);
+    //자바스크립트로 등록한 이벤트가 실행되지 않을수가 있다
+    </script>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <button>버튼1</button>
+    <button>버튼2</button>
+    <div class="box"></div>
+</body>
+</html>
