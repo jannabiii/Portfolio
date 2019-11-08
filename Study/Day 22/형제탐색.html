@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $('.five').siblings().css('border','1px solid black');
+            $('.one').siblings('.one').css('border-readius','50px');
+            $('.five').next().css('text-aline','center')
+            $('.five').prev().css('text-aline','right')
+            $('.five').nextall().css('color','tomato')
+            $('.five').nextUntil('.seven').css('font-weight','bold')
+        })
+        //siblings()나를 제외한 모든 형제들에게 적용
+    </script>
+</head>
+<body>
+    <ul>
+        <li class="one" >1</li>
+        <li class="two" >2</li>
+        <li class="three" >3</li>
+        <li class="four" >4</li>
+        <li class="five" >5</li>
+        <li class="six" >6</li>
+        <li class="seven" >7</li>
+        <li class="eight" >8</li>
+    </ul>
+</body>
+</html>

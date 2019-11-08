@@ -8,28 +8,32 @@
 	<script src="../js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			/*
-			$(selector).animate({params},speed,callback);
-			매개변수
-			 - params : 애니메이션 속성, 최종적으로 바뀌어야한 
-						속성
-			 - speed : 애니메이션 동작 시간
-			 - callback : 애니메이션 동작 후 작업
-			animate를 이용하여 애니메이션을 적용하는 경우
-			해당 속성들이 요소의 style 속성 추가된다.
-			animate함수들은 호출 순서가 다르다.
-			animate함수가 끝난다음에 실행하고 싶은 코드는
-			callbakc함수에 넣어야한다.
-			*/
 			$('#power').click(function(){
-				$('.move').animate({right:'0'},1000);
-				$('.move').animate({bottom:'0'},1000);
-				$('.move').animate({left:'0'},1000);
-				$('.move').animate({top:'0'},1000,function(){
-					//animate에 의해 추가된 style 속성을 초기화
-					$('.move').prop('style','');
-
-				});
+				if(!$('#power').hasClass('stop')){
+					$('.move').animate({right:'0'},2000);
+					$('.move').animate({bottom:'0'},2000);
+					$('.move').animate({left:'0'},2000);
+					$('.move').animate({top:'0'},2000,function(){
+						$('.move').prop('style','');
+					});
+				}else{
+					/*
+					$(selector).stop(stopAll,goToEnd);
+					매개변수
+					1. stopAll : 선택, 기본값 false
+					  - 실행해야할 애니메이션이 여러개라면 여러개를
+						  중지할지말지를 결정하는 값
+						- true면 모든 애니메이션 중지
+						- fasle면 현재 실행중인 애니메이션만 중지
+					2. goToEnd : 선택, 기본값 false
+					  - 중지했을 때 위치가 중지한 위치인지 완료된 상황에서
+						  멈출것인지를 결정하는 값
+						- false면 현재 위치에서 멈춤
+						- true면 완료된 상테에서 멈춤
+					*/
+					$('.move').stop(false,true);
+				}
+				$('#power').toggleClass('stop')
 			})
 		});
 	</script>

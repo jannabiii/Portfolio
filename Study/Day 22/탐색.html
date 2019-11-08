@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>조상탐색</title>
+    <script>
+        /*
+        $('선택자1').parent('선택자2')
+        선택자1을 기준으로 부모가 선택자 2에 해당하는 요소의 정보를 가져옴
+        */
+        $(function(){
+            $('ul').parent('.div1').css('color','red');
+        })
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+        </ul>
+    </div>
+    <div class="div2">
+        <ul>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </div>
+</body>
+</html>

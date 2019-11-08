@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            $('input').submit(function(){
+                $('.error').html('');
+            var str= $(this).val();
+            var id = $(this).prop('id');
+                //아이디 입력창의 내용이 바뀌었는데 빈 문자열인
+                //경우 비번입력창의 내용이 바뀌었는데 빈문자열인 경우
+            if(id !='pw2' && str.length == 0){
+            $(this).next().text('필수 항목입니다.');
+           
+            }
+            else if(id =='id' &&(str.length < 5 || str.length > 10)){
+                $(this).next().text('아이디는 최소 5자에서 최대 10자 입니다.');
+            }
+            else if(id =='pw1' &&(str.length < 8 || str.length > 15)){
+                $(this).next().text('비번은 최소 8자에서 최대 15자 입니다.');}
+            else if(id == 'pw2'){
+                var str2 = $('pw1').val();
+            if(str != str2){
+                $(this).next().text('비밀번호와 일치하지 않습니다.');
+            }
+            }
+            })
+            $('#pw1').keyup(function(){
+                $(this).next().html('')
+            })
+            $('form').submit(function(){
+                var id = $('#id').val();
+                var submit =true;
+                if(id.length ==0){
+                    $('#idError').text('아이디는 최소 5자에서 최대 10자 입니다.');
+                }
+        })
+        })
+    </script>
+    <style>
+    .red{
+        color :crimson;
+    }
+    .container{
+        width: 400px;
+        margin: 100px auto;
+    }
+    .input{
+        height: 30px;
+        font-size: 18px;
+        border : 1px solid blue;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .h1{
+        text-align: center;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: darkgray;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>회원가입</h1>
+            <form action="">
+                <div>
+                    <input type="text" class="input" placeholder="아이디" id="id" maxlength="10">
+                </div>
+                    <div id="idError" class="red"></div>
+                <div>
+                    <input type="password" class="input" placeholder="비번" id="pw1" maxlength="15">
+                    <div id="pw1Error" class="red"></div>
+                </div>
+                <div>
+                    <input type="password" class="input" placeholder="비번확인" id="pw2">
+                    <div id="pw2Error" class="red"></div>
+                </div>
+                <button>회원가입</button>
+            </form>
+    </div>
+</body>
+</html>
