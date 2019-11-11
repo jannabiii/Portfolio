@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        /*
+        대상 : box
+        이벤트 : click
+        사용해야하는 함수들 : animate({css속성들},속도,콜백함수)
+        동작순서:
+        1.css의 속성 중 margin-left의 값을 가져와서 변수에 저장(ml)
+        2.ml이 -000 이면 animate를 이용하여 margin-left의 값을 0으로 변경
+        3.ml이 -000 가 아니면 animate를 이용하여 margin-left의 값을 -000으로 변경
+        */
+        //$(selector).animate({params},speed,callback);
+        $(document).ready(function(){
+            $('.botton').click(function(){
+                var ml = $('.box').css('margin-left');
+                if(ml !='0px'){
+                    $('.box').animate({'margin-left':0},500);
+                }
+                else{
+                    $('.box').animate({'margin-left':'-200px'},500);
+                }
+            })
+        })
+        //다른방법: $('.box').animate({'margin-right':0},500); 
+    </script>
+    <style>
+        *{
+            margin: 0px;
+        }
+    .botton{
+        border : 1px solid black;
+        line-height: 48px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .box{
+        background-color: rgb(121, 165, 247);
+        width: 200px;
+        height: 300px;
+        margin-top: 20px;
+        margin-left :-200px;
+    }
+    .botton:hover{
+        background-color: rgb(182, 182, 182);
+    }
+    </style>
+</head>
+<body>
+    <div class ="botton">버튼</div>
+    <div class ="box"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>메뉴 클릭시 색 변경</title>
+    <script>
+        /*
+        대상 : 메뉴
+        이벤트 : click
+        사용해야하는 함수들 : addClass(), removeClass()
+        동작순서
+        1.전체 메뉴에 A라는 클래스를 제거한다
+        2.클릭한 메뉴에만 A라는 클래스를 추가한다.
+        */
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('.menu').removeClass('a');
+                $(this).addClass('a');
+            })
+        })
+    </script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav{
+            background-color: rgb(36, 42, 49);
+            color: ivory;
+        }
+        .a{
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="menu">메뉴1</div>
+        <div class="menu">메뉴2</div>
+        <div class="menu">메뉴3</div>
+    </nav>
+</body>
+</html>
