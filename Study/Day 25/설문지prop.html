@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>지역변수 전역변수 차이를 보여주는 예제</title>
+    <script>
+    /*
+        $('선택자').each(function(){
+            $(this)
+        })
+    each :요소들을 하나씩 꺼내어 작업할 때 사용을 한다.
+          $('선택자').이벤트명(function(){
+              $('선택자').each(function(){
+            });        })
+    */
+    var cnt1 = 0;
+    $(document).ready(function(){
+        //cnt1은 스크립트가 실행될 때 선언되서 스크립트가 다 끝날 때까지 유지된다.
+        //버튼을 클릭할 때 cnt2가 생성되며 클릭이벤트가 종료되기전까지 유지된다.
+        $('button').click(function(){
+            var cnt2 = 0;
+            cnt1++;
+            cnt2++;
+            
+            console.log('cnt1',cnt1);
+            console.log('cnt2',cnt2);
+            return false;
+        })
+    })
+    </script>
+    <style>
+        .botton{
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .botton:hover{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" class = "checkbox">야구<br>
+        <input type="checkbox" class = "checkbox">농구<br>
+        <input type="checkbox" class = "checkbox">축구<br>
+        <input type="checkbox" class = "checkbox">기타<br>
+        <button class="button">제출</button>
+    </form>
+</body>
+</html>

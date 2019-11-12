@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+    /*
+    대상 :
+    이벤트 :
+    관련 함수들 : 
+    -eq(index) :index+1번째 요소를 선택
+    -remobeClass('클래스명') :클래스 제거
+    -addClass('클래스명'): 클래스 추가
+    -length : 해당 요소들의 갯수
+
+    동작순서
+    0.전역번수 index 선언 초기값 : 0
+    1.모든 메뉴에 select 클래스를 제거
+    2.다음 또는 이전 메뉴에 select 클래스 추가
+    2-1 다음 버튼인 경우
+    -index에 1을 더함
+    -index
+    */
+     $(document).ready(function(){
+            $('.menu').click(function(){
+                $(this).css('background-color','black')
+            })
+        })
+        $('.menu').click(function(){
+            $('.menu').removeClass('a');
+            $(this).addClass('a');
+        })
+        /*index를 맞추면 된다.each를 통해서 메뉴에*/
+    </script>
+    <style>
+    .nav{
+        height: 30px;
+        background-color: teal;
+        color: white;
+        display: flex;
+        cursor: pointer;
+    }
+    .menu{
+        border:1px solid white;
+        padding: 10px;
+        line-height: 10px;
+        text-align: center;
+    }
+    .button{
+        margin-top: 10px;
+    }
+    .a{
+        background-color: darkkhaki;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="menu" >메뉴1</div>
+        <div class="menu" >메뉴2</div>
+        <div class="menu" >메뉴3</div>
+    </div>
+    <div class="button">
+        <button class="sub">A</button>
+        <button class="add">B</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>설문지</title>
+    <script>
+        /*대상 : 제출버튼.form태그
+        이벤트 : click ,submit
+        사용해야하는 함수들 : checked(),
+        동작순서:
+        1.check박스에서 선언한 전역변수의 값이 0이면 알림창을 띄우고 return을 false로 하여 submit()을 막음
+        2.0이 아니면 submit()을 진행
+        */
+        var cnt = 0;
+    $(document).ready(function(){
+        $('.checkbox').change(function(){
+            $(this).prop('checked')
+            if($(this).prop('checked') == true){
+                cnt++;
+            }else{
+                cnt--;
+            }
+        })
+        $('.button').click(function(){
+            if(cnt == 0){
+                alert('1개 이상 선택하세요.');
+                return false;
+            }
+        })
+        if($(this).prop('checked')){
+            cnt++;
+            str += $(this)
+        }
+        
+    })
+    /*
+    each를 이용하여 checkbox를 하나씩 살필 때 checked라는 속성을 이용하여 cnt를 하나씩 증가할 때
+    증가만 하는게 아니라 str이라는 문자열을 만들어서 str에 checked가 true일 때의 value값을 가져와서
+    str에 이어 붙여야한다
+    str = '야구, 농구.''
+    */
+    </script>
+    <style>
+    .botton{
+        width: 100px;
+        height: 30px;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    .botton:hover{
+        background-color: burlywood;
+    }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" class = "checkbox" value="1">야구<br>
+        <input type="checkbox" class = "checkbox" value="2">농구<br>
+        <input type="checkbox" class = "checkbox" value="3">축구<br>
+        <input type="checkbox" class = "checkbox" value="4">기타<br>
+        <button class="button">제출</button>
+    </form>
+</body>
+</html>
