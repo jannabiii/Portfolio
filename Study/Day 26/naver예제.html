@@ -7,263 +7,15 @@
     <script src="../js/jquery.min.js"></script>
     <script src="js/naver예제.js"></script>
     <title>네이버</title>
-    <script>
-        $(document).ready(function(){
-            $('.keyboard').click(function(){
-                $('.keyboard-icon').toggleClass('green');
-            })
-        })
-        $(document).ready(function(){
-            $('.auto').click(function(){
-                $('.auto-icon').toggleClass('active');
-                $(".auto-box").toggle();
-            })
-        })
-    </script>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .body{
-            min-width: 1100px;
-        }
-        /*header와 관련된 CSS*/
-        .header{
-            height: 178px;
-        }
-        .header-top{
-            height: 130px;
-        }
-        .header-bottom{
-            height: 48px;
-            border-top: 1px solid rgb(241, 243, 246);
-            border-bottom: 1px solid rgb(209, 216, 218);
-        }
-        /*main과 관련된 CSS*/
-        .main{
-            height:1466px;
-            min-width: 1080px;
-        }
-        .container{
-            width: 1080px;
-            height:100%;
-            margin: 0 auto;
-            position: relative;
-        }
-        .box-left{
-            width: 740px;
-            height: 100%;
-            float: left;
-        }
-        .box{
-            width: 100%;
-            margin-top: 8px;
-        }
-        .left-contents1, .right-contents1{
-            height: 120px;
-        }
-        .left-contents2{
-            height: 46px;}
-        .left-contents3{
-            height: 246px;}
-        .left-contents4{
-            height: 884px;}
-        .left-contents5{
-            height: 130px;}
-        .right-contents2{
-            height: 142px; }
-        .right-contents3{
-            height: 150px; }
-        .right-contents4{
-            height: 884px; }
-        .right-contents5{
-            height: 130px; }
-        .box-right{
-            width: 332px;
-            height: 100%;
-            float: right;
-        }
-        /*헤더 탑과 관련된 CSS*/
-        .logo{
-            width: 198px;
-            height: 48px;
-            position: absolute;
-            top: 50%;
-            left: -2px;
-            margin-top: -25px;
-            background-position: -4px -4px;
-        }
-        /*footer와 관련된 CSS*/
-        .footer{
-            height:314px;
-            margin-top: 8px;
-        }
-        /*배경 색 관련*/
-        .bg-white{
-            background-color: white;
-        }
-        .bg-body{
-            background-color: rgb(244, 244, 247);
-        }
-        .search-box{
-            width: 521px;
-            height: 49px;
-            box-sizing: border-box;
-            position: absolute;
-            top:50%;
-            margin-top: -20px;
-            left: 219px;
-        }
-        .search-in{
-            border: 2px solid #03cf5d;
-            width: 474px;
-            height: 49px;
-        }
-        .search{
-            width: 405px;
-            height: 23px;
-            margin: 12px 0 0 9px;
-            border : none;
-            outline: none;
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 23px;
-        }
-        .keyboard{
-            width: 31px;
-            height: 41px;
-            padding: 15px 6px;
-            display: block;
-            position: absolute;
-            right :76px;
-            top:50%;
-            margin-top: -21px;
-        }
-        .keyboard-icon{
-            width: 19px;
-            height: 11px;
-            background-position: -33px -60px;
-            display: block;
-        }
-        .green{
-            background-position: -60px -60px;
-        }
-        .auto{
-            width: 31px;
-            height: 41px;
-            padding: 19px 12px 19px 6px;
-            display: block;
-            position: absolute;
-            right :49px;
-            top:50%;
-            margin-top: -21px;
-        }
-        .auto-icon{
-            width: 9px;
-            height: 4px;
-            background-position: -87px -60px;
-            display: block;
-        }
-        .active{
-            background-position: -138px -60px;
-        }
-        .search-btn{
-            width: 49px;
-            height: 49px;
-            background-color: #03cf5d;
-            position: absolute;
-            right: 0;
-            top:0;
-        }
-        .search-icon{
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            width: 21px;
-            height: 21px;
-            background-position: -4px -60px;
-        }
-        .auto-box{
-            width: 521px;
-            height: 90px; 
-            border: 1px solid #bec8d8;
-            background-color: #fff;
-            margin-top:-2px;
-            display: none;
-            position: relative;
-            color: #666;
-            font-size: 12px;
-            line-height: 18px;
-            font-family: '돋움',dotum,helvetica,'나눔바른고딕 옛한글','NanumBarunGothic YetHangul','새굴림',sans-serif;
-            z-index: 100;
-        }
-        .typobox{
-            width: 100%;
-            height: 33px;
-            padding: 8px 0;
-            border: 1px solid #ebeef3;
-            border-width: 1px 0 0;
-            background: #f9fafc;
-            color: #666;
-            font-size: 11px;
-            line-height: 28px;
-        }
-        .a{
-            text-decoration: none; 
-        }
-        .happybean{
-            width: 34px;
-            height: 11px;
-            background-position: -143px -99px;
-            position: absolute;
-            right:0px;
-            top: 20px;
-        }
-        .happybean:hover{
-            background-position: -136px -157px;
-        }
-        .green-container{
-            width: 303px;
-            height: 32px;
-            box-sizing: border-box;
-            padding: 16px 0 0 4px;
-            display: flex;
-            float: left;
-        }
-        .green-container>a{
-            margin-left: 14px;
-            text-decoration: none;
-            display: block;
-        }
-        .green-container>a:first-child{
-            margin-left: 0;
-            height: 16px;
-        }
-        .mail{width:25px; background-position:0 -285px;}
-        .cafe{width:27px; background-position:-279px -52px;}
-        .blog{width:40px; background-position:-100px -182px;}
-        .kin{width:40px; background-position:-101px -156px;}
-        .shop{width:26px; background-position:-279px -156px;}
-        .pay{width:25px; background-position:-70px -285px ;}
-        .tv{width:32px; background-position:-125px -130px; margin-top: -1px;}
-        /*배경이미지와 관련된 CSS*/
-        .bg1{
-            background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg');
-        }
-        .bg2{
-            background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191029.png');
-        }
-        .bg3{
-            background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png');
-        }
-    </style>
+    <link rel="stylesheet" href="css/naver예제.css">
 </head>
 <body class="bg-body">
+        <div class="addbox"></div>
+        <div class="addbox2"></div>
         <div class="header bg-white">
             <div class="header-top">
                 <div class="container">
+                    <!---->
                     <div class="logo bg1"></div>
                     <div class="search-box">
                         <div class="search-in">
@@ -302,6 +54,21 @@
                         <a href="#" class="pay bg3"></a>
                         <a href="#" class="tv bg3"></a>
                     </div>
+                    <div class="black-container">
+                        <a href="#" class="box-menu black-box bg3 dic"></a>
+                        <a href="#" class="box-menu black-box bg3 news"></a>
+                        <a href="#" class="box-menu black-box bg3 stock"></a>
+                        <a href="#" class="box-menu black-box bg3 deal"></a>
+                        <a href="#" class="box-menu black-box bg3 map"></a>
+                        <a href="#" class="black-box bg3 movie"></a>
+                        <a href="#" class="black-box bg3 music"></a>
+                        <a href="#" class="black-box bg3 book"></a>
+                        <a href="#" class="black-box bg3 comic"></a>
+                    </div>
+                    <div class="bar">
+                        <div class="more bg3"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -318,7 +85,17 @@
                     </div>
                     <div class="box-right">
                         <div class="right-contents1 box bg-white"></div>
-                        <div class="right-contents2 box bg-white"></div>
+                        <div class="right-contents2 box bg-white">
+                            <div class="week">
+                                <div class="day">11.14 (목)</div>
+                                <div class="issue">이슈</div>
+                                <span class="page">1</span>/<span class="max">5</span>
+                                <div class="button">
+                                        <a href="#" class="go"><i class="bg4 prev"></i></a>
+                                        <a href="#" class="go"><i class="bg4 next"></i></a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="right-contents3 box bg-white">
                             <a href="https://campaign.naver.com/fleamarketweek2019/"><img src="./img/광고2.jpg" alt=""></a>
                         </div>
