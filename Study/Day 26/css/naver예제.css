@@ -39,6 +39,7 @@
 .box{
     width: 100%;
     margin-top: 8px;
+    border:1px solid #dee3eb;
 }
 .left-contents1, .right-contents1{
     height: 120px;
@@ -251,7 +252,6 @@
     border:none;
     background-color: transparent;
     margin-top: 0px;
-    display: inline-block;
     float: left;
     margin-left: 14px;
 }
@@ -267,6 +267,29 @@
 .music{width:26px; background-position:-72px -259px;}
 .book{width:13px; background-position:-140px -78px;}
 .comic{width:27px; background-position:-279px 0;}
+
+.naviempty{
+    width: 350px;
+    height: 38px;
+    position: relative;
+    float: left;
+    padding-top: 16px;
+    padding-left: 14px;
+    display: none;
+}
+.empty:first-child{
+    border-color: #00b336;
+}
+.empty{
+    width: 64px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: -8px;
+    border: 1px solid #e3e7ee;
+    background: #fcfdfe;
+    float: left;
+    display: block;
+}
 
 .bar{
     float: left;
@@ -290,6 +313,120 @@
     margin-top: -2px;
     margin-left: 14px;
 }
+/*더보기 시 서비스 전체보기 버튼*/
+.sv{
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    padding-top: 8px;
+    height: 37.8px;
+    background: #fff;
+    display: none;
+}
+.sv2{
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    padding-top: 8px;
+    height: 37.8px;
+    background: #fff;
+    display: none;
+    color: #444;
+    font-weight: 700;
+}
+.service-all{
+    float: left;
+    width: 98px;
+    height: 28px;
+    border: 1px solid #e3e7ee;
+    background: #fff;
+    color: #444;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 25px;   
+}
+.service-all2{
+    float: left;
+    width: 73px;
+    height: 28px;
+    border: 1px solid #e3e7ee;
+    background: #fff;
+    color: #444;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+}
+.service-all:hover{
+    border-color: #bec8d8;
+}
+.service-menu{
+    float: left;
+    margin-left: 5px;
+    width: 68px;
+    height: 28px;
+    border: 1px solid #e3e7ee;
+    background: #fff;
+    color: #444;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 25px; 
+}
+.service-menu2{
+    float: left;
+    margin-left: 5px;
+    width: 53px;
+    height: 28px;
+    border: 1px solid #e3e7ee;
+    background: #fff;
+    color: #444;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+}
+.ok:hover{
+    border-color: #a3badd;
+}
+.cancel:hover{
+    border-color: #a3badd;
+}
+.service-menu:hover{
+    border-color: #bec8d8;
+}
+.close-menubox{
+    width:27px;
+    height: 27px;
+    float: left;
+    margin: 2px 0 0 9px;
+    padding: 5px;
+    background: #fff;
+}
+.bottonimg{
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-position: -191px -257px;
+}
+.bottonimg:hover{
+    background-position: -164px -257px;
+}
+.start{
+    display: inline-block;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    background-position: -132px -291px;
+    vertical-align: -3px;
+}
+.start:hover{background-position: -132px -291px;}
+/**/
 .addbox{
     width: 100%;
     height: 353px;
@@ -301,6 +438,125 @@
     left: 0;
     z-index: 100;
 }
+/*더보기 눌렀을시 나오는 설정메뉴 목록*/
+.addsv:first-child{
+    width: 138px;
+    border-left: 1px solid #f1f3f6;
+}
+.ssv{
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0 15px;
+    width: 1080px;
+}
+.itemhouse{
+    padding-top: 4px;
+}
+.addsv{
+    width: 156px;
+    height: 318px;
+    padding: 0 0 0 16px;
+    float: left;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
+    border-right: 1px solid #f1f3f6;
+}
+.sv-item{
+    overflow: hidden;
+    padding-top: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*실시간 검색어 순위*/
+.real-search-container{
+    width: 198px;
+    height: 20px;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+    overflow: hidden;
+}
+.real-search-item{
+    padding: 0 0 0 21px;
+    position: relative;
+}
+.real-search-link{
+    text-decoration: none;
+    color:black;
+}
+.real-search-rank{
+    position: absolute;
+    min-width: 17px;
+    line-height: 18px;
+    left:0;
+    text-align: center;
+    color:#00ab33;
+    font-size: 16px;
+    top:2px;
+}
+.real-search-title{
+    font-size: 14px;
+    width: 140px;
+    letter-spacing: -1px;
+}
+.real-search-icon{
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    margin-top: -3px;
+    margin-left: 525px;
+    width: 11px;
+    height: 6px;
+    background-position: -223px -147px;
+}
+/*연합뉴스 목록 올라가는 부분*/
+.cast{
+    width: 738px;
+    height: 33px;
+    position: relative;
+    padding: 15px 0 0 16px;
+    list-style: none;
+    display: flex;
+}
+.cast-list{
+    overflow: hidden;
+    height: 20px;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px;
+}
+.castflash{
+    display: block;
+    margin-right: 12px;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+    line-height: 16px;
+}
+.casticon{
+    display: inline-block;
+    margin-left: 8px;
+    width: 5px;
+    height: 9px;
+    background-position: -256px -100px;
+    vertical-align: middle;
+}
+.ca-link{
+    text-decoration: none;
+}
+.ca-title{
+    color:#222;
+    font-size: 12px;
+}
+/**/
 .addbox2{
     width: 100%;
     height: 1788px;
@@ -374,6 +630,58 @@
 
 .prev{width: 6px; background-position: -433px -303px; display: inline-block; height: 11px;}
 .next{width: 6px; background-position: -433px -324px; display: inline-block; height: 11px;}
+/*왼쪽 3번째 컨텐츠 관련 CSS*/
+.l3-top{
+    height: 45px;
+    border-bottom: 1px solid#ebeef3;
+}
+.l3-bot{
+    height: 200px;
+}
+.l3-low{
+    height: 67px;
+    border-bottom: 1px solid #ebeef3;
+    display: flex;
+}
+.l3-low:last-of-type{
+    border-bottom: none;
+}
+.l3-item{
+    width: 100%;
+    border-right: 1px solid #ebeef3;
+    padding:21px 0 22px;
+}
+.l3-item-in{
+    height: 100%;
+    text-align: center;
+}
+/*체크박스*/
+.radio{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+.checkboximg{
+    display: inline-block;
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+    background-position: -28px -62px;
+    vertical-align: -3px;
+}
+.checkbox{
+    position: absolute;
+    visibility: hidden;
+    float: left;
+}
+.radio-checked{
+    width: 15px;
+    height: 15px;
+    background-position: -53px -62px;
+}
+.display-none{
+    display: none;
+}
 
 /*배경이미지와 관련된 CSS*/
 .bg1{
@@ -386,3 +694,11 @@
     background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png');
 }
 .bg4{background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png');}
+    
+.bottonimg{background-image: url('https://s.pstatic.net/static/www/img/2018/sp_themecast_v180607.png');
+}
+.checkboximg{background-image: url('https://s.pstatic.net/static/www/img/2018/sp_more_v180627.png');}
+.bg7{background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191113.png');}
+.bg8{
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+}
