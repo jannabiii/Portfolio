@@ -218,6 +218,7 @@
     padding: 0 4px;
     line-height: 51px;
     vertical-align: top;
+    width:auto;
 }
 .todo{
     width: 46px;
@@ -387,6 +388,9 @@ body{
     content: "";
     display: block;
 }
+.tabcontents .swiper-slide{
+    margin-top: 112px;
+}
 .contents{
     width: 50%;
     background-color: white;
@@ -395,6 +399,94 @@ body{
 .economy{
     height: 337.8px;
 }
+/*드라마,예능 버튼*/
+.cell-menu-wrap{
+    padding: 11px 0;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.07);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.07);
+}
+.cell-list{
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    white-space: nowrap;
+    font-size: 0;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    background-color: #f2f1ff;
+    vertical-align: top;
+    list-style: none;
+}
+.cell-item{
+    display: inline-block;
+    min-width: 101px;
+    vertical-align: top;
+    font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
+    font-weight: 500;
+}
+.cell-item-drama{
+    display: block;
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    color: #6257ff;
+    letter-spacing: -1px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cell-item-drama::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    width: 41px;
+    height: 14px;
+    background-position: -214px -323px;
+    margin-left: -20.5px;
+    background-size: 625px 594px;
+}
+.cell-item-ent{
+    /* background-image: linear-gradient(to right,#9063fe,#686bfe); */
+    border-radius: 18px;
+    display: block;
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #6257ff;
+}
+.cell-item-ent::before{
+    width: 27px;
+    height: 14px;
+    background-position: -308px -488px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    margin-left: -13.5px;
+}
+.a{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+    background-image: linear-gradient(to right,#9063fe,#686bfe);
+    border-radius: 18px;
+    display: block;
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+/*---------------------------------------------------------------*/
 .news-all{
     height: 200px;
 }
@@ -545,3 +637,4 @@ body{
 .bg2{background-image: url('https://s.pstatic.net/static/www/m/uit/2019/sp_cui_v191114.png');
 }
 .bg1-1{background-image: url('https://s.pstatic.net/static/www/m/uit/2019/sp_search_v191126.png');}
+.bg2-2{background-image: url('https://s.pstatic.net/static/www/m/uit/2019/sp_cui_v191127.png');}

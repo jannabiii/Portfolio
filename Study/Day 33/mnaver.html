@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>모바일 네이버</title>
-    <script src="../js/jquery.min.js"></script>
-    <script src="js/mnaver.js"></script>
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/mnaver.css">
     <link rel="stylesheet" href="css/mnaver2.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="js/mnaver.js"></script>
+    
+    <style>
+    .tabMenu{
+        background:#2f2d2d;
+        color:#fff;
+    }
+    .tabMenu .swiper-slide-active,
+    .tabMenu .active{
+        color:#ffd800;
+    }
+    .tabMenu .swiper-slide {
+        display: inline-block;
+        width: auto;
+        padding:10px 0;
+    }
+    </style>
 </head>
 <body>
     <!--head 시작부분-->
@@ -36,75 +54,101 @@
         </div>
         <div class="bgcolor"></div>
         <div class="menu-list">
-            <div class="prev"></div>
-            <div class="next"></div>
-            <ul class="nav">
-                <li class="nav_item"><a href="#" class="L todo navbg"></a></li>
-                <li class="nav_item"><a href="#" class="L enter navbg"></a></li>
-                <li class="nav_item"><a href="#" class="L pay navbg"></a></li>
-                <li class="nav_item"><a href="#" class="L selective navbg"></a></li>
-                <li class="nav_item"><a href="#" class="L beauty navbg"></a></li>
-                <li class="nav_item"><a href="#" class="L vogue navbg"></a></li>
-                <li class="nav_item"><a href="#" class="L home navbg"></a></li>
-                <li class="nav_item nav_on">
-                    <a href="#" class="R news navbg"></a>
-                    <span class="nav_page">
-                        <span class="page current">NEWS_CHANNEL</span>
-                        <span class="page">NEWS_FEED</span>
-                    </span>
-                </li>
-                <li class="nav_item"><a href="#" class="R ent navbg"></a></li>
-                <li class="nav_item"><a href="#" class="R sports navbg"></a></li>
-                <li class="nav_item"><a href="#" class="R data navbg"></a></li>
-                <li class="nav_item"><a href="#" class="R shopping navbg"></a></li>
-                <li class="nav_item"><a href="#" class="R myplace navbg"></a></li>
-                <li class="nav_item"><a href="#" class="R myfeed navbg"></a></li>
-            </ul>
-            <div class="nav-more">
-                <a class="more-button bg1-1"></a>
+            <div class="menu-list-container swiper-container">
+                <div class="prev"></div>
+                <div class="next"></div>
+                <ul class="nav swiper-wrapper">
+                    <li class="nav_item swiper-slide" data-hash="slide1"><a href="#" class="L todo navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide2"><a href="#" class="L enter navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide3"><a href="#" class="L pay navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide4"><a href="#" class="L selective navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide5"><a href="#" class="L beauty navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide6"><a href="#" class="L vogue navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide7"><a href="#" class="L home navbg"></a></li>
+                    <li class="nav_item swiper-slide nav_on" data-hash="slide8">
+                        <a href="#" class="R news navbg"></a>
+                        <span class="nav_page">
+                            <span class="page current">NEWS_CHANNEL</span>
+                            <span class="page">NEWS_FEED</span>
+                        </span>
+                    </li>
+                    <li class="nav_item swiper-slide" data-hash="slide9"><a href="#" class="R ent navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide10"><a href="#" class="R sports navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide11"><a href="#" class="R data navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide12"><a href="#" class="R shopping navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide13"><a href="#" class="R myplace navbg"></a></li>
+                    <li class="nav_item swiper-slide" data-hash="slide14"><a href="#" class="R myfeed navbg"></a></li>
+                </ul>
+                <div class="nav-more">
+                    <a class="more-button bg1-1"></a>
+                </div>
             </div>
         </div> 
     </div>
-    <!--body 시작부분-->
-    <div class="body">
-        <div class="contents economy"></div>
-        <div class="contents news-all"></div>
-        <div class="contents news-location"></div>
-        <div class="contents pan"></div>
-        <div class="contents news-list"></div>
-        <div class="contents broadcast"></div>
-        <div class="contents press"></div>
-        <div class="contents internet box1">
-            <div class="card-title">인터넷·IT지</div>
-            <div class="card">
-                <div class="card-row">
-                    <div class="card-item">
-                        <div class="card-subs bg2"></div>
-                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png'>
-                        <div class="card-name">데일리안</div>
+            <!--body 시작부분-->
+            <div class="swiper-container tabContents">
+                <div class="swiper-wrapper">
+                    <div class="body swiper-slide" data-hash="slide1">
+                        <div class="contents economy">
+                            <div class="cell-menu-wrap">
+                                <ul class="cell-list">
+                                    <li class="cell-item"><a href="#" class="cell-item-drama bg2-1 a">드라마</a></li>
+                                    <li class="cell-item"><a href="#" class="cell-item-ent bg2-1">예능</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents news-all"></div>
+                        <div class="contents news-location"></div>
+                        <div class="contents pan"></div>
+                        <div class="contents news-list"></div>
+                        <div class="contents broadcast"></div>
+                        <div class="contents press"></div>
+                        <div class="contents internet box1">
+                            <div class="card-title">인터넷·IT지</div>
+                            <div class="card">
+                                <div class="card-row">
+                                    <div class="card-item">
+                                        <div class="card-subs bg2"></div>
+                                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png'>
+                                        <div class="card-name">데일리안</div>
+                                    </div>
+                                    <div class="card-item">
+                                        <div class="card-subs bg2"></div>
+                                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/029/2018/08/08/logo_029_57_20180808174608.png'>
+                                        <div class="card-name">디지털타임스</div>
+                                    </div>
+                                    <div class="card-item">
+                                        <div class="card-subs bg2"></div>
+                                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/092/2018/08/08/logo_092_57_20180808174708.png '>
+                                        <div class="card-name">지디넷코리아</div>
+                                    </div>
+                                    <div class="card-item">
+                                        <div class="card-subs bg2"></div>
+                                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/047/2018/08/08/logo_047_57_20180808174708.png'>
+                                        <div class="card-name">오마이뉴스</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents edit"></div>
+                        <div class="contents ad"></div>
+                        <div class="line"></div>
                     </div>
-                    <div class="card-item">
-                        <div class="card-subs bg2"></div>
-                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/029/2018/08/08/logo_029_57_20180808174608.png'>
-                        <div class="card-name">디지털타임스</div>
-                    </div>
-                    <div class="card-item">
-                        <div class="card-subs bg2"></div>
-                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/092/2018/08/08/logo_092_57_20180808174708.png '>
-                        <div class="card-name">지디넷코리아</div>
-                    </div>
-                    <div class="card-item">
-                        <div class="card-subs bg2"></div>
-                        <img class="card-icon" src='https://s.pstatic.net/mimgnews/image/upload/office_logo/047/2018/08/08/logo_047_57_20180808174708.png'>
-                        <div class="card-name">오마이뉴스</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contents edit"></div>
-        <div class="contents ad"></div>
-        <div class="line"></div>
-    </div>
+    <!--body클래스 끝-->
+        <div class="swiper-slide" data-hash="slide1">뭐하지</div>
+        <div class="swiper-slide" data-hash="slide2">엔터</div>
+        <div class="swiper-slide" data-hash="slide3">MY페이</div>
+        <div class="swiper-slide" data-hash="slide4">셀렉티브</div>
+        <div class="swiper-slide" data-hash="slide5">오늘부터</div>
+        <div class="swiper-slide" data-hash="slide6">트렌드</div>
+        <div class="swiper-slide" data-hash="slide7">홈</div>
+        <div class="swiper-slide" data-hash="slide8">국화축제</div>           
+        <div class="swiper-slide" data-hash="slide9">연예</div>
+        <div class="swiper-slide" data-hash="slide10">스포츠</div>
+        <div class="swiper-slide" data-hash="slide11">검색차트</div>
+        <div class="swiper-slide" data-hash="slide12">쇼핑</div>
+        <div class="swiper-slide" data-hash="slide13">우리동네</div>
+        <div class="swiper-slide" data-hash="slide14">MY구독</div>
     <!--footer 시작부분-->
     <div class="footer"></div>
 </body>
