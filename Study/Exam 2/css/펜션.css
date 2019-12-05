@@ -1,11 +1,15 @@
+@charset 'utf-8';
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    widows: 1920px;
+    width: 1920px;
     height: 1200px;
+    background-image: url('../img/메인.jpg');
+    background-repeat: no-repeat;
+    position: relative;
 }
 .head{
     width:1920px;
@@ -117,7 +121,8 @@ li{
 .body{
     width:1920px;
     height: 916px;
-    background-color: wheat;
+    position: relative;
+    /* background-color: wheat; */
 }
 .main{
     width:1920px;
@@ -133,7 +138,7 @@ li{
     top: 50%;
     left: 50%;
     margin-left: 120px;
-    margin-top: -120px;
+    margin-top: -270px;
 }
 .cali{
     font-size: 70px;
@@ -150,34 +155,212 @@ li{
 .contents{
     width: 1000px;
     height: 124px;
-    border:1px solid black;
     display: flex;
-    position: relative;
-    top: 0;
-    left:0;
-    margin-top: 500px;
-    margin-left: 400px;
+    position: absolute;
+    top: 500px;
+    left:400px;
 }
 .contents-item{
     width:250px;
     height: 124px;
-    border:1px solid skyblue;
 }
 .contents2{
     width: 1000px;
     height: 152px;
-    border:1px solid black;
-    position: relative;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    top: 624px;
+    left:400px;
+}
+/*예약관련 컨텐츠 칸--------------------------------------*/
+.blue{
+    background-color: #32acdb;;
+}
+.card{
+    margin-top: 28px;
+    margin-left: 20px;
+}
+.card-typo{
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+.card-typo2{
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 10px;
+    color: white;
+    margin-top: 8px;
+}
+.card1{
+    width: 68px;
+    height: 68px;
+    display: block;
+    border-radius: 40px;
+    display: inline-block;
+    position: absolute;
     top: 0;
-    left:0;
-    margin-left: 400px;
+    left: 0;
+    margin-top: 28px;
+    margin-left: 170px;
+}
+.card2{
+    width: 68px;
+    height: 68px;
+    display: block;
+    border-radius: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 28px;
+    margin-left: 420px;
+}
+.card3{
+    width: 68px;
+    height: 68px;
+    display: block;
+    border-radius: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 28px;
+    margin-left: 670px;
+}
+.card4{
+    width: 68px;
+    height: 68px;
+    display: block;
+    border-radius: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 28px;
+    margin-left: 920px;
+}
+.mint{
+    background-color: #4bc2b7;
+}
+.orange{
+    background-color:#db6132 ;
+}
+.brown{
+    background-color: #665759;
+}
+/*공지사항.지점소개 등등 기타란*/
+.contents-info{
+    width:250px;
+    height: 152px;
+    border:1px solid black;
+}
+.contents-area{
+    width: 500px;
+    height: 152px;
+    border:1px solid black;
+}
+.contents-qna{
+    width:250px;
+    height: 152px;
+    border:1px solid black;
+}
+.info-title{
+    font-family: 'NanumBarunGothic', sans-serif;
+    text-align: left;
+    margin-left: 16px;
+}
+.bar{
+    width:110px;
+    height: 1px;
+    background-color: gray;
+    display: inline-block;
+    opacity: 0.5;
+}
+.info-t2{
+    width:70px;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+    display: inline-block;
+}
+.info-item{
+    font-size: 12px;
+    color: black;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    margin-top: 10px;
+}
+.info-item:first-of-type{
+    margin-top: 12px;
+}
+.date:first-of-type{padding:15px 8px;}
+.date{
+    display: inline-block;
+    font-size: 8px;
+    padding:6px 8px;
+    color: gray;
+    opacity: 0.5;
+}
+.info-t3{
+    font-family: 'NanumBarunGothic', sans-serif;
+    text-align: left;
+    margin-left: 16px;
+    width:70px;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+    display: inline-block;
+    margin-top: 10px;
+}
+.bar2{
+    width:350px;
+    height: 1px;
+    background-color: gray;
+    display: inline-block;
+    opacity: 0.5;
+}
+.area-list{
+    width: 437px;
+    height: 65px;
+    margin-top: 20px;
+    margin-left: 17px;
 }
 /*footer 시작부분---------------------------------------*/
 .footer{
-    position: relative;
-    top:0;
+    position: absolute;
+    bottom: 0;
     left: 0;
     width:1920px;
     height: 128px;
     background-color: white;
+}
+.copyright{
+    float: right;
+    padding: 30px 280px;
+    text-align: right;
+}
+.a{
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 15px;
+    opacity: 0.5;
+    font-weight: 500;
+}
+.b{
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 15px;
+    opacity: 0.5;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.c{
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: 500;
+    margin-top: 10px;
 }
