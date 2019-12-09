@@ -254,17 +254,14 @@ li{
 .contents-info{
     width:250px;
     height: 152px;
-    border:1px solid black;
 }
 .contents-area{
     width: 500px;
     height: 152px;
-    border:1px solid black;
 }
 .contents-qna{
     width:250px;
     height: 152px;
-    border:1px solid black;
 }
 .info-title{
     font-family: 'NanumBarunGothic', sans-serif;
@@ -341,25 +338,25 @@ li{
 }
 .copyright{
     float: right;
-    padding: 30px 280px;
+    padding: 30px 530px;
     text-align: right;
 }
 .a{
     font-family: 'NanumBarunGothic', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     opacity: 0.5;
     font-weight: 500;
 }
 .b{
     font-family: 'NanumBarunGothic', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     opacity: 0.5;
     font-weight: 500;
     margin-top: 10px;
 }
 .c{
     font-family: 'NanumBarunGothic', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     opacity: 0.5;
     font-weight: 500;
     margin-top: 10px;
