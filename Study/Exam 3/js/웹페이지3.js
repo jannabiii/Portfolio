@@ -1,5 +1,5 @@
-$(document).ready(function(){
-    $('.sns').hover(function(){
-        $(this).find('.sns-item').toggleClass('info-item-box');
-    })
-})
+// $(document).ready(function(){
+//     $('.nav-list').hover(function(){
+//         $(this).toggleClass('select')
+//     })
+// })

@@ -30,10 +30,17 @@
     font-weight: bold;
     cursor: pointer;
 }
-.nav-list:first-of-type{
+.nav a{
+    text-decoration: none;
+    color: #000000;
+}
+.nav .select a{
+    color: #0ba39c;
+}
+/* .nav-list:first-of-type{
     color: #0ba39c;
     margin-left: 0px;
-}
+} */
 .nav-list{
     margin-left: 36px;
 }
@@ -252,11 +259,98 @@
     text-align: center;
     line-height: 50px;
 }
+/*Blog single post부분 -------------------------------*/
+.photobox{
+    width: 940px;
+    height: 299px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 76px;
+    margin-left: -200px;
+}
+/* .photo-a{
+    width: 620px;
+    height: 299px;
+    border:1px solid slateblue;
+}
+.photo-b{
+    width: 320px;
+    height: 299px;
+    border:1px solid skyblue;
+} */
+.text-area{
+    width: 620px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 450px;
+    margin-left: -30px;
+    text-align: center;
+}
+.h1{
+    font-family: 'Myriadpro', sans-serif;
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+}
+/*Gallery single post 부분 */
+.gallery-photo{
+    width: 621px;
+    height: 299px;
+    margin-top: 32px;
+    margin-left: -31px;
+}
+.prim-box{
+    width:320px;
+    height: 35px;
+    background-color: #252525;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 680px;
+    margin-left: 570px;
+    text-align: center;
+}
+.prim-typo{
+    color: white;
+    font-family: 'Poller One', cursive;
+    font-size: 14pt;
+    text-align: center;
+    line-height: 40px;
+}
+.prim-typo2{
+    width:620px;
+    margin-left: -160px;
+    margin-top: 10px;
+}
+/*gallery 부분*/
+.photo-list{
+    width: 938px;
+    height: 938px;
+    margin-left: 250px;
+    margin-top: 76px;
+}
+.list-a{
+    border :1px solid black;
+    margin: 5px 5px;
+}
+.list-b{
+    border :1px solid black;
+    margin: 5px 5px;
+}
+.list-c{
+    border :1px solid black;
+    margin: 5px 5px;
+}
 /*footer 부분 시작-------------------------------------*/
 .footer{
     width: 1440px;
     height: 126px;
     background-color: #252525;
+    position: relative;
 }
 .copyright{
     color: white;
@@ -269,8 +363,6 @@
     width: 240px;
     height: 42px;
     position: absolute;
-    top:0;
-    left: 0;
-    margin-top: 1400px;
-    margin-left: 957px;
+    top:36px;
+    right: 252px;
 }
