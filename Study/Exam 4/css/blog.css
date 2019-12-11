@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.TOPANG{
+    width: 1024px;
+    height: 1559px;
+}
+/*head 시작 부분-----------------------------------*/
+.head{
+    width: 1024px;
+    height: 290px;
+    background-color: white;
+}
+.logo{
+    margin-top: 30px;
+    margin-left: 360px;
+}
+.nav{
+    width: 1024px;
+    height: 31px;
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    top:0 ;
+    left: 0;
+    margin-top: 259px;
+    list-style: none;
+    display: flex;
+}
+.nav-list{
+    color: white;
+    margin-left: 30px;
+}
+.nav-list:first-of-type{
+    margin-left: 210px;
+}
+/*body 시작 부분----------------------------------*/
+.body{
+    width: 1024px;
+    height: 760px;
+    background-color: white;
+    display: flex;
+}
+/*contents-left부분--------------------------------*/
+.contents-left{
+    width: 190px;
+    height: 674px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+.left-a{
+    width: 190px;
+    height: 99px;
+    border: 1px solid gray;
+}
+.left-b{
+    width: 190px;
+    height: 48px;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+.left-c{
+    width: 190px;
+    height: 136px;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+.left-d{
+    width: 190px;
+    height: 313px;
+    border: 1px solid gray;
+    margin-top: 58px;
+}
+/*contents-middle---------------------------------*/
+.contents-middle{
+    width: 512px;
+    height: 674px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.middle-a{
+    width: 512px;
+    height: 156px;
+    border: 1px solid gray;
+}
+.middle-b{
+    width: 512px;
+    height: 54px;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+.middle-c{
+    width: 512px;
+    height:121px;
+    /* border: 1px solid gray; */
+    display: flex;
+    margin-top: 10px;
+}
+.c-1{
+    width: 251px;
+    height:121px;
+    border: 1px solid salmon;
+}
+.c-2{
+    width: 251px;
+    height:121px;
+    border: 1px solid deepskyblue;
+    margin-left: 10px;
+}
+.middle-d{
+    width: 512px;
+    height:163px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    display: flex;
+}
+.d-1{
+    width: 251px;
+    height:163px;
+    border: 1px solid salmon;
+}
+.date{
+    width:251px;
+    height:19px;
+    border: 1px solid salmon;
+}
+.subway{
+    width:251px;
+    height:71px;
+    /* border: 1px solid deepskyblue; */
+    margin-top: 10px;
+    display: flex;
+}
+.sub-photo{
+    width:95px;
+    height:71px;
+}
+.sub-text{
+    width:145px;
+    height:71px;
+}
+.h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    opacity: 0.7;
+    margin-left: 10px;
+}
+.h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    opacity: 0.4;
+    margin-top: 24px;
+    margin-left: 10px;
+}
+.subway-news{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    margin-left: 10px;
+}
+.subway-news:first-of-type{
+    margin-top: 10px;
+}
+.info-life{
+    width:251px;
+    height:163px;
+    /* border: 1px solid deepskyblue; */
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    margin-left: 10px;
+}
+.middle-e{
+    width: 512px;
+    height:140px;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+/*contents-right시작부분-------------------------------*/
+.contents-right{
+    width: 185px;
+    height: 674px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.right-a{
+    width: 185px;
+    height: 156px;
+    border: 1px solid gray;
+}
+.right-b{
+    width: 185px;
+    height: 185px;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+.right-c{
+    width: 185px;
+    height: 313px;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+/*footer 시작 부분 --------------------------------*/
+.footer{
+    width: 1024px;
+    height: 512px;
+    background-color: wheat;
+}
