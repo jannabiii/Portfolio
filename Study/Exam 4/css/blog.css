@@ -59,7 +59,7 @@
 .left-b{
     width: 190px;
     height: 48px;
-    border: 1px solid gray;
+    border: 2px solid #fa5065;
     margin-top: 10px;
 }
 .left-c{
@@ -86,6 +86,10 @@
     height: 156px;
     border: 1px solid gray;
 }
+.visit{
+    width: 510px;
+    height: 154px;
+}
 .middle-b{
     width: 512px;
     height: 54px;
@@ -99,39 +103,79 @@
     display: flex;
     margin-top: 10px;
 }
+.green{
+    display: none;
+}
 .c-1{
     width: 251px;
     height:121px;
-    border: 1px solid salmon;
+    border: 2px solid #fa5065;
 }
 .c-2{
     width: 251px;
     height:121px;
-    border: 1px solid deepskyblue;
+    /* border: 1px solid deepskyblue; */
     margin-left: 10px;
+}
+.musical{
+    width: 251px;
+    height:121px;
+}
+.blog-life{
+    width: 251px;
+    height: 26px;
+    /* border: 1px solid deepskyblue; */
+    display: flex;
+}
+.c-blog{
+    color: #fa5065;
+    font-weight: bold;
+}
+.c-life{
+    font-weight: bold;
+    opacity: 0.7;
+}
+.musical-photo{
+    width: 92px;
+    height: 80px;
+}
+.musicalbox{
+    display: flex;
+    margin-top: 10px;
 }
 .middle-d{
     width: 512px;
     height:163px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     margin-top: 10px;
     display: flex;
 }
 .d-1{
     width: 251px;
     height:163px;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 }
 .date{
     width:251px;
     height:19px;
-    border: 1px solid salmon;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+.date-color{
+    color:#fa5065;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.3;
 }
 .subway{
     width:251px;
     height:71px;
     /* border: 1px solid deepskyblue; */
     margin-top: 10px;
+    margin-left: 10px;
     display: flex;
 }
 .sub-photo{
@@ -199,8 +243,12 @@
 .right-b{
     width: 185px;
     height: 185px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     margin-top: 10px;
+}
+.candle{
+    width: 185px;
+    height: 185px;
 }
 .right-c{
     width: 185px;
@@ -209,8 +257,22 @@
     margin-top: 10px;
 }
 /*footer 시작 부분 --------------------------------*/
+.sponser{
+    width: 776px;
+    height: 52px;
+    border:1px solid gray;
+    margin-left: 122px;
+}
 .footer{
     width: 1024px;
     height: 512px;
-    background-color: wheat;
+    background-color: white;
+    text-align: center;
+}
+.address{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    margin-top: 20px;
+    margin-left: 10px;
+    opacity: 0.8;
 }
