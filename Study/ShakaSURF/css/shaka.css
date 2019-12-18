@@ -106,7 +106,7 @@
 }
 .head-flower1{
     width: 400px;
-    transform: rotate(30deg);
+    transform: rotate(10deg);
 
     position: absolute;
     left: 900px;
@@ -128,7 +128,7 @@
     left: 620px;
     top: 670px;
 }
-/*------------------------------menu---*/
+/*----------------------------------------------메뉴시작 부분---*/
 .menu{
     width: 1582px;
     height: 69px;
@@ -166,11 +166,139 @@
     margin-top: 46px;
     margin-left: 190px;
 }
-.hamburger{
+/* .hamburger{
     width: 35px;
     height: 32px;
     margin-top: 54px;
     margin-left: 12px;
+} */
+
+/*------------------------------메뉴팝업창*/
+.Menu-popup{
+    width: 1494px;
+    height: 655px;
+    background-color: #232323;
+    position: absolute;
+    top: 127px;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.reservation-go{
+    width: 416px;
+    height: 102.72px;
+    background-color: #e1a640;
+    margin-top: 40px;
+    /* border:1px solid white; */
+}
+.reservation-typo2{
+    font-size: 32pt;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    line-height: 98px;
+}
+.menu-imgbox{
+    width :414px;
+    height: 468px;
+    background-color: black;
+}
+.imgbox-list{
+    width :416px;
+    height: 100%;
+    filter: grayscale(100%);
+    filter: brightness(30%);
+}
+.menu-typobox{
+    width: 1494px;
+    height: 136px;
+    margin-top: -350px;
+    display: flex;
+    border:1px solid rgb(157, 255, 112);
+    z-index: 15;
+}
+.menu-typobox1{
+    width :350px;
+    height: 136px;
+    border:1px solid white;
+    margin-left: 25px;
+    z-index: 15;
+}
+.menu-typobox2{
+    width :430px;
+    height: 136px;
+    border:1px solid white;
+    margin-left: 75px;
+    z-index: 15;
+}
+.menu-typobox3{
+    width :300px;
+    height: 136px;
+    border:1px solid white;
+    margin-left: 75px;
+    z-index: 15;
+}
+.english-title{
+    font-size: 24pt;
+    font-family: myriad-pro, sans-serif;
+    color: white;
+    border:1px solid white;
+}
+.korea-title{
+    font-size: 56pt;
+    font-family: NanumGothic, Bold;
+    font-weight: bold;
+    color: white;
+    border:1px solid white;
+}
+.logo-small{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 470px;
+    left: 1340px;
+    border:1px solid white;
+}
+.menu-leaf1{
+    width:400px;
+    position: absolute;
+    top:-170px;
+    left: 200px;
+    transform: rotate(85deg);
+    filter: brightness(0);
+}
+.menu-leaf2{
+    width:400px;
+    position: absolute;
+    top:400px;
+    left: 200px;
+    transform: rotate(10deg);
+    filter: brightness(0);
+}
+.menu-leaf3{
+    width:400px;
+    position: absolute;
+    top:-150px;
+    left: 1100px;
+    transform: rotate(-110deg);
+    filter: brightness(0);
+}
+.menu-leaf4{
+    width:400px;
+    position: absolute;
+    top:450px;
+    left: 790px;
+    transform: rotate(-10deg);
+    filter: brightness(0);
+}
+.menu-leaf5{
+    width:400px;
+    position: absolute;
+    top:370px;
+    left: 1000px;
+    transform: rotate(-15deg);
+    filter: brightness(0);
 }
 /*----------------------------------------메인사진/로고-----------------*/
 .main-photo{
@@ -350,13 +478,13 @@
     animation-fill-mode: forwards;
 }
 /*-----------------------------------슬라이드로 사진 넘기는 갤러리부분--------*/
-.slide-gallery{
+/* .slide-gallery{
     width: 1582px;
     height: 619px;
     float: left;
     position: relative;
-}
-.prev{
+} */
+/* .prev{
     width: 69px;
     height: 69px;
     background-color: black;
@@ -364,13 +492,6 @@
     margin-top: 230px;
     margin-left: 160px;
     z-index: 10;
-}
-.show-1{
-    width: 308px;
-    height: 308px;
-    position: absolute;
-    top: 110px;
-    left: 158px;
 }
 .show-2{
     width: 570.56px;
@@ -385,6 +506,27 @@
     position: absolute;
     top: 110px;
     left: 1120px;
+} */
+.swiper-container {
+    width: 1582px;
+    height: 619px;
+    position: absolute;
+  }
+  .swiper-slide {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: -50px;
+}
+.show{
+    width: 408px;
+    height: auto;
 }
 /*--------------------------------------이벤트 타이틀------------------*/
 .info-title2{
@@ -409,7 +551,7 @@
     font-size: 18pt;
     text-align: center;
 }
-/*------------------------이벤트 요일별 슬라이드 리스트-----------*/
+/*----------------------------이벤트 요일별 슬라이드 리스트-----------*/
 .evnet-show{
     width: 1264px;
     height: 550px;
@@ -465,6 +607,17 @@
     font-weight: 700;
     font-size: 54pt;
     text-align: center;
+    color: #08404a;
+    cursor: pointer;
+}
+.event-date2{
+ color :#e1a640;
+}
+.underbar-event{
+    width:288px;
+    height: 1px;
+    background-color: #999999;
+    margin-top: 74px;
 }
 .event-month{
     font-family: myriad-pro, sans-serif;
@@ -478,6 +631,7 @@
     height: 288px;
     position: absolute;
     top: 262px;
+    display: none;
 }
 /*----------------------------------footer 시작부분---------------*/
 .footer{
@@ -488,14 +642,14 @@
     position: relative;
 }
 .footer-title{
-    font-size: 18px;
-    font-family: NanumSquare ,sans-serif;
+    font-size: 26px;
+    font-family: myriad-pro, sans-serif;
     font-weight: bold;
     text-align: center;
     position: absolute;
     top: 68px;
     left: 50%;
-    margin-left: -78px;
+    margin-left: -114px;
 }
 .footer-sub{
     margin-top: 68px;
@@ -540,21 +694,21 @@
     margin-top: 24px;
 }
 /*-------------------------------------이파리 애니메이션------*/
-.moving{
+/* .moving{
     animation: moving ease-in-out 1s infinite alternate;
     transform-origin: -20px;
-}
-@keyframes moving {
+} */
+/* @keyframes moving {
     0% { transform: rotate(-5deg); }
     100% { transform: rotate(-3deg); }
-}
+} */
 .texture{
     width:2500px;
     height: 4030px;
     position: absolute;
     z-index: -1;
     filter: contrast(100%);
-    filter: brightness(150%);
+    filter: brightness(200%);
     filter: saturate(-80);
     opacity: 0.1;
 }
@@ -621,3 +775,87 @@
         right:600px;
     }
   }
+/*----------------------*/
+/* @keyframes event {
+    0% {
+        -webkit-transform: scaleY(0.4);
+                transform: scaleY(0.4);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+    }
+} */
+/*--------------------------햄버거 메뉴 애니메이션 CSS */
+.menu-css{
+    --color: black;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-appearence: none;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+* {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  .menu-css svg {
+    width: 64px;
+    height: 48px;
+    top: 38px;
+    left: -8px;
+    stroke: var(--color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+    position: absolute;
+  }
+  .menu-css svg path {
+    transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
+    stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+    stroke-dashoffset: var(--offset, 126px);
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  .menu-css svg path:nth-child(2) {
+    --duration: .7s;
+    --easing: ease-in;
+    --offset: 100px;
+    --array-2: 74px;
+  }
+  .menu-css svg path:nth-child(3) {
+    --offset: 133px;
+    --array-2: 107px;
+  }
+  .menu-css.active svg path {
+    --offset: 57px;
+  }
+  .menu-css.active svg path:nth-child(1), .menu.active svg path:nth-child(3) {
+    --delay: .15s;
+    --easing: cubic-bezier(.2, .4, .2, 1.1);
+  }
+  .menu-css.active svg path:nth-child(2) {
+    --duration: .4s;
+    --offset: 2px;
+    --array-1: 1px;
+  }
+  .menu-css.active svg path:nth-child(3) {
+    --offset: 58px;
+  }
+/*-------------------------------------------------------*/
