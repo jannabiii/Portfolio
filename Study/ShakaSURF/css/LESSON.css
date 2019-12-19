@@ -1,0 +1,200 @@
+/*---------------------------------------------------전체 화면설정----------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.SHAKA-SURF{
+    width: 1582px;
+    height: 2751px;
+    margin: 0 auto;
+}
+/*---------------------------------------------------전체 화면설정----------------*/
+/*----------------------------------Head 시작부분---------------*/
+.head{
+    width: 1582px;
+    height:1098px;
+    background-color: wheat;
+}
+.body{
+    width: 1582px;
+    height: 1158px;
+    background-color: rosybrown;
+}
+/*----------------------------------------------메뉴시작 부분---*/
+.menu{
+    width: 1582px;
+    height: 69px;
+    /* border:1px solid black; */
+    display: flex;
+}
+.reservation-box{
+    width: 279.47px;
+    height: 68.88px;
+    background-color: #e1a640;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.reservation-typo{
+    font-size: 22pt;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    line-height: 68px;
+}
+.menubox{
+    width: 279.47px;
+    height: 68px;
+    float: right;
+    /* border:1px solid forestgreen; */
+    margin-right: 100px;
+    margin-left:826px;
+    display: flex;
+}
+.menu-typo{
+    font-size: 18pt;
+    font-family: myriad-pro-condensed, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 46px;
+    margin-left: 190px;
+}
+/*--------------------------햄버거 메뉴 애니메이션 CSS */
+.menu-css{
+    --color: black;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-appearence: none;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+* {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  .menu-css svg {
+    width: 64px;
+    height: 48px;
+    top: 38px;
+    left: -8px;
+    stroke: var(--color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+    position: absolute;
+  }
+  .menu-css svg path {
+    transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
+    stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+    stroke-dashoffset: var(--offset, 126px);
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  .menu-css svg path:nth-child(2) {
+    --duration: .7s;
+    --easing: ease-in;
+    --offset: 100px;
+    --array-2: 74px;
+  }
+  .menu-css svg path:nth-child(3) {
+    --offset: 133px;
+    --array-2: 107px;
+  }
+  .menu-css.active svg path {
+    --offset: 57px;
+  }
+  .menu-css.active svg path:nth-child(1), .menu.active svg path:nth-child(3) {
+    --delay: .15s;
+    --easing: cubic-bezier(.2, .4, .2, 1.1);
+  }
+  .menu-css.active svg path:nth-child(2) {
+    --duration: .4s;
+    --offset: 2px;
+    --array-1: 1px;
+  }
+  .menu-css.active svg path:nth-child(3) {
+    --offset: 58px;
+  }
+/*-------------------------------------------------------*/
+.slide{
+    width: 1390px;
+    height: 833px;
+    border:1px solid darkturquoise;
+    position: relative;
+    top: 58px;
+    left: 100px;
+}
+/*----------------------------------footer 시작부분---------------*/
+.footer{
+    width: 1582px;
+    height: 500px;
+    background-color: #c2c2c2;
+    text-align: center;
+    position: relative;
+}
+.footer-title{
+    font-size: 26px;
+    font-family: myriad-pro, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    margin-left: -114px;
+}
+.footer-sub{
+    margin-top: 68px;
+    font-size: 14px;
+    text-align: center;
+    font-family: NanumSquare ,sans-serif;
+    font-weight: bold;
+    line-height: 28px;
+
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -160px;
+}
+.sns{
+    width: 156px;
+    height: 76px;
+    /* border:1px solid sandybrown; */
+
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    margin-left: -80px;
+}
+.sns-icon{
+    display: flex;
+}
+.fab{
+    font-size: 34px;
+    margin-left: 16px;
+    margin-top: 28px;
+}
+.underbar{
+    width: 150px;
+    height: 1px;
+    background-color: black;
+}
+.underbar2{
+    width: 150px;
+    height: 1px;
+    background-color: black;
+    margin-top: 24px;
+}

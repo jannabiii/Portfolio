@@ -68,6 +68,24 @@ $(document).ready(function(){
         $(this).toggleClass("event-date2")
     })
 })
+//햄버거 메뉴 클릭시 메뉴 팝업 슬라이드로 나오게 하기
+$(document).ready(function(){
+    $('.menu-css').click(function(){
+        if($(this).hasClass('active')){
+            $(".Menu-popup").animate({left:'-8px'});
+        }else{
+            $(".Menu-popup").animate({left:'-1800px'});
+        }
+        
+    })
+})
 
 
-    
+//해당메뉴란에 마우스를 올리면 이미지가 바뀌도록 하기
+$(document).ready(function(){
+    $('.menu-typobox2').hover(function(){
+        $(".imgbox-list2").animate({left:'-8px'});     
+    })
+})
+
+//강습렌탈페이지_슬라이드 

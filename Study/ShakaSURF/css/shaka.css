@@ -140,6 +140,7 @@
     height: 68.88px;
     background-color: #e1a640;
     margin-left: 100px;
+    cursor: pointer;
 }
 .reservation-typo{
     font-size: 22pt;
@@ -180,7 +181,7 @@
     background-color: #232323;
     position: absolute;
     top: 127px;
-    left: 0;
+    left: -1500px;
     z-index: 10;
     overflow: hidden;
 }
@@ -188,7 +189,9 @@
     width: 416px;
     height: 102.72px;
     background-color: #e1a640;
-    margin-top: 40px;
+    position: absolute;
+    top:40px;
+    cursor: pointer;
     /* border:1px solid white; */
 }
 .reservation-typo2{
@@ -197,12 +200,14 @@
     font-style: normal;
     font-weight: 700;
     text-align: center;
-    line-height: 98px;
+    line-height: 78px;
+    cursor: pointer;
 }
 .menu-imgbox{
     width :414px;
-    height: 468px;
-    background-color: black;
+    height: 488px;
+    margin-top: 120px;
+    top:140px;
 }
 .imgbox-list{
     width :416px;
@@ -210,47 +215,70 @@
     filter: grayscale(100%);
     filter: brightness(30%);
 }
+.imgbox-list2{
+    width :414px;
+    height: 488px;
+    filter: grayscale(100%);
+    filter: brightness(30%);
+    margin-top: -650px;
+    margin-left: -1100px;
+}
+.imgbox-list3{
+    width :416px;
+    height: 100%;
+    filter: grayscale(100%);
+    filter: brightness(30%);
+    
+}
 .menu-typobox{
     width: 1494px;
     height: 136px;
     margin-top: -350px;
     display: flex;
-    border:1px solid rgb(157, 255, 112);
+    /* border:1px solid rgb(157, 255, 112); */
     z-index: 15;
 }
 .menu-typobox1{
     width :350px;
     height: 136px;
-    border:1px solid white;
-    margin-left: 25px;
+    /* border:1px solid white; */
+    margin-left: 45px;
     z-index: 15;
+    cursor: pointer;
 }
 .menu-typobox2{
     width :430px;
     height: 136px;
-    border:1px solid white;
+    /* border:1px solid white; */
     margin-left: 75px;
     z-index: 15;
+    cursor: pointer;
 }
 .menu-typobox3{
     width :300px;
     height: 136px;
-    border:1px solid white;
+    /* border:1px solid white; */
     margin-left: 75px;
     z-index: 15;
+    cursor: pointer;
 }
 .english-title{
     font-size: 24pt;
     font-family: myriad-pro, sans-serif;
     color: white;
-    border:1px solid white;
+    /* border:1px solid white; */
 }
 .korea-title{
     font-size: 56pt;
     font-family: NanumGothic, Bold;
     font-weight: bold;
     color: white;
-    border:1px solid white;
+    /* border:1px solid white; */
+    text-decoration: none;
+}
+a{text-decoration: none;}
+.korea-title:hover{
+    color:#e1a640;
 }
 .logo-small{
     width: 100px;
@@ -258,7 +286,7 @@
     position: absolute;
     top: 470px;
     left: 1340px;
-    border:1px solid white;
+    /* border:1px solid white; */
 }
 .menu-leaf1{
     width:400px;
