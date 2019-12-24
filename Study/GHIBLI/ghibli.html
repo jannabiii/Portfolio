@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>지브리 슬라이드</title>
+    <script src="https://kit.fontawesome.com/54db56871c.js" crossorigin="anonymous"></script>
+    <link href="//db.onlinewebfonts.com/c/c4ef86bd668052b8caff03e75b23390e?family=Kozuka+Gothic+Pr6N+H" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../ShakaSURF/css/swiper.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .GHIBLI{
+        width: 1440px;
+        height: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .black{
+        width: 1440px;
+        height: 900px;
+        position: absolute;
+        background-color: black;
+        opacity: 0.3;
+    }
+    .img{
+        overflow: hidden;
+        display: flex;
+    }
+    .nav{
+        width: 600px;
+        height: 100px;
+        /* border:1px solid chartreuse; */
+        position: absolute;
+        top: 30px;
+        left: 48px;
+        display: flex;
+        z-index: 10;
+    }
+    .title{
+        width:1440px;
+        height: 140px;
+        position: absolute;
+        top: 334px;
+        left: 0px;
+        overflow: hidden;
+        z-index: 10;
+        /* border:1px solid chartreuse; */
+
+    }
+    .sub-title{
+        width:1440px;
+        height: 64px;
+        position: absolute;
+        top: 474px;
+        left: 0px;
+        /* border:1px solid chartreuse; */
+    }
+    .contnets{
+        width:500px;
+        height: 220px;
+        position: absolute;
+        top: 602px;
+        left: 50%;
+        margin-left: -250px;
+        /* border:1px solid chartreuse; */
+    }
+    .nav-list{
+        list-style: none;
+        display: flex;
+        color: white;
+        font-size: 16pt;
+        font-weight: 400;
+        font-family: myriad-pro, sans-serif;
+        font-style: Regular;
+        margin-top: 47px;
+        margin-left: 20px;
+    }
+    .list-item{
+        margin-left: 50px;
+    }
+    .main-title{
+        font-size: 90pt;
+        font-family: "Kozuka Gothic Pr6N H";
+        font-style: H;
+        font-weight: 900;
+        color: white;
+        text-align: center;
+        margin-top: -50px;
+        
+    } 
+    .border-title-left{
+        font-size: 90pt;
+        font-family: "Kozuka Gothic Pr6N H";
+        font-style: H;
+        font-weight: 900;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        position: absolute;
+        left: -790px;
+        top: -50px;
+        cursor: pointer;
+    }
+    .border-title-right{
+        font-size: 90pt;
+        font-family: "Kozuka Gothic Pr6N H";
+        font-style: H;
+        font-weight: 900;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        position: absolute;
+        left: 1260px;
+        top: -50px;
+        cursor: pointer;
+    }
+    .sub{
+        font-size: 20pt;
+        font-family: "Kozuka Gothic Pr6N R", sans-serif;
+        color: white;
+        text-align: center;
+        line-height: 58px;
+    }
+    .story{
+        text-align: center;
+        color: white;
+        font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+        font-size: 20pt;
+    }
+    .story-sub{
+        text-align: center;
+        color: white;
+        font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+        font-size: 15pt;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 30px;
+    }
+    .point{
+        position: absolute;
+        top:831px;
+        left: 50%;
+        margin-left: -20px;
+        transform: rotate(-90deg);
+    }
+   </style>
+   <script>
+       $(document).ready(function(){
+        var swiper = new Swiper('.img', {
+            navigation: {
+            nextEl: '.border-title-left',
+            prevEl: '.border-title-right',
+            },
+        });
+    })
+   </script>
+</head>
+<body>
+    <div class="GHIBLI">
+        <div class="black"></div>
+        <div class="img swiper-container">
+            <div class="swiper-wrapper">
+                <img class="swiper-slide" width="1440px" height="900" src="img/천공의 성 라퓨타.jpg" alt="">
+                <img class="swiper-slide" width="1440px" height="900" src="img/센과 치히로.jpg" alt="">
+                <img class="swiper-slide" width="1440px" height="900" src="img/마녀배달부 키키.jpg" alt="">
+            </div>
+        </div>
+        <div class="nav">
+            <img width="206px" height="90px" src="img/ghibli_logo_white-1.png" alt="">
+            <ul class="nav-list">
+                <li class="list-item">ABOUT</li class="list-item">
+                <li class="list-item">FILMS</li>
+                <li class="list-item">GALLERY</li>
+            </ul>
+        </div>
+        <div class="title">
+            <div class="main-title">天空の城ラピュタ</div>
+            <div class="border-title-left">千と千尋の神隠し</div> 
+            <div class="border-title-right">魔女の宅急便</div>
+        </div>
+        <div class="sub-title">
+            <p class="sub">ある日、少女が空から降ってきた…</p class="sub">
+        </div>
+        <div class="contnets">
+            <p class="story">
+                INTRODUCE
+            </p>
+            <p class="story-sub">
+                The first animation by Studio Ghibli.<br>
+                The name Laputa is borrowed from<br>
+                Gulliver's Travels because Laputa flies in the sky,<br>
+                and the main character Paz helps a girl caught by pirates.<br>
+            </p>
+        </div>
+        <img class="point" width="40px" height="auto" src="img/왼쪽표시.png" alt="">
+    </div>
+</body>
+</html>
