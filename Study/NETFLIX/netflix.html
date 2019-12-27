@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>호두까기 인형</title>
+    <script src="https://kit.fontawesome.com/54db56871c.js" crossorigin="anonymous"></script>
+    <link href="//db.onlinewebfonts.com/c/c4ef86bd668052b8caff03e75b23390e?family=Kozuka+Gothic+Pr6N+H" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../ShakaSURF/css/swiper.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .NETFLIX{
+        width: 1440px;
+        height: 1024px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .solid-backcolor{
+        width: 1440px;
+        height: 1024px;
+        background-color: black;
+        position: absolute;
+        opacity: 0.7;
+    }
+    .background{
+        width: 1440px;
+        height: 1024px;
+    }
+    .logo{
+        width: 300px;
+        height: 80px;
+        /* border:1px solid yellow; */
+        position: absolute;
+        top: 32px;
+        left: 30px;
+        z-index: 1;
+    }
+    .logo-item1{
+        position: absolute;
+        top: 5px;
+        width: 102px;
+        height: auto;
+    }
+    .logo-item2{
+        position: absolute;
+        left: 115px;
+        top: -5px;
+        width: 140px;
+        height: auto;
+    }
+    .base{
+        width:1239px;
+        height: 622px;
+        /* border:1px solid greenyellow; */
+        position: absolute;
+        top: 204px;
+        left: 106px;
+        box-shadow: 5px 5px 15px 5px;
+    }
+    .poster{
+        width: 1108px;
+        height: auto;
+    }
+    .sidebar{
+        width: 230px;
+        height: 622px;
+        background-color: #101418;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        overflow: hidden;
+    }
+    .moviebox{
+        width: 181px;
+        height: 116px;
+        /* border:1px solid mediumturquoise; */
+        position: absolute;
+        left: 24px;
+        top: -20px;
+    }
+    .num2{
+        position: absolute;
+        top: 164px;
+    }
+    .num3{
+        position: absolute;
+        top: 348px;
+    }
+    .num4{
+        position: absolute;
+        top: 536px;
+    }
+    .text{
+        width: 150px;
+        height: 30px;
+        /* border:1px solid mediumseagreen; */
+        position: absolute;
+        top: 128px;
+        font-family:'NanumSquare', serif;
+        font-size: 12pt;
+        color: white;
+    }
+    .fa-play-circle{
+        font-size: 30pt;
+        position: absolute;
+        top: 486px;
+        left: 156px;
+        color: red;
+        z-index: 5
+    }
+    .fa-play{
+        font-size: 15pt;
+        position: absolute;
+        top: 496.5px;
+        left: 168px;
+        color: white;
+        z-index: 5
+    }
+    .playbutton{
+        font-size: 30pt;
+        position: absolute;
+        top: 40px;
+        left: 67px;
+        color: white;
+        z-index: 5;
+        opacity: 0.5;
+    }
+    .story{
+        width: 400px;
+        height: 105px;
+        /* border:1px solid aqua; */
+        position: absolute;
+        top: 480px;
+        left: 210px;
+        z-index: 10;
+    }
+    h1{
+        font-family:'Nanum Myeongjo', serif;
+        font-size: 14pt;
+        color: white;
+    }
+    h2{
+        font-family:'NanumSquare', serif;
+        font-size: 14pt;
+        color: white;
+        font-weight: lighter;
+    }
+</style>
+</head>
+<body>
+    <div class="NETFLIX">
+        <div class="logo">
+            <img class="logo-item1" src="img/영화 로고.png" alt="">
+            <img class="logo-item2" src="img/넷플릭스 로고.png" alt="">
+        </div>
+        <div class="solid-backcolor"></div>
+        <img class="background" src="img/배경.jpg" alt="">
+        <div class="netflix-main">
+            <div class="base">
+                <img class="poster" src="img/메인사진.jpg" alt="">
+                <i class="fas fa-play-circle"></i>
+                <i class="fas fa-play"></i>
+                <div class="sidebar">
+                    <div class="moviebox num1">
+                        <img class="movie-list" width="181px" height="116px" src="img/오피셜 트레일러.jpg" alt="">
+                        <div class="text">
+                            Official trailer <br>Nutcracker scene
+                        </div>
+                    </div>
+                    <div class="moviebox num2">
+                        <img class="movie-list" width="181px" height="116px" src="img/비하인드.jpg" alt="">
+                        <div class="text">
+                            Behind the scenes <br>HD player Youtube
+                        </div>
+                    </div>
+                    <div class="moviebox num3">
+                        <img class="movie-list" width="181px" height="116px" src="img/영화장면.jpg" alt="">
+                        <div class="text">
+                            Best scenes <br>All Clara wants is a key
+                        </div>
+                        <a onClick="movieDialog(this)" href="https://www.youtube.com/watch?v=cD4IGnxFV1E">
+                            <i class="fas fa-play-circle playbutton"></i>
+                        </a>
+                    </div>
+                    <div class="moviebox num4">
+                        <img class="movie-list" width="181px" height="116px" src="img/발레.jpg" alt="">
+                    </div>
+                </div>
+                <div class="story">
+                    <h1>IN THEATRES NOVEMBER2</h1>
+                    <h2>IA young girl is transported into a <br>
+                        magical world of gingerbread<br> 
+                        soldiers and an army of mice.</h2>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
